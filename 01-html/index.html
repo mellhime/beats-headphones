@@ -3,11 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="Agency landing page">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> // поддержка устройств (важно) -->
+        <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> // версия IE (если нужно) -->
         <title>Agency landing page</title>
     </head>
     <body>
+        <!-- Почти всегда в таких случаях нужна обертка (тн wrapper/container) - просто div вложенный в body -->
         <header>
             <nav>
+            <!-- Повторяющиеся элементы почти всегда список nav>ul>li>a -->
                 <a href="/home">Home</a>
                 <a href="/portfolio">Portfolio</a>
                 <a href="/about_us">About us</a>
@@ -15,13 +19,19 @@
             </nav>
         </header>
         <main>
-            <article>
-                <h1>OUR STRONG ORGANISATION</h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <button type="button">Contact Us</button>
-            </article>
+            <!-- Нужна секция <section> -->
+            <!-- Нужна обертка тк кнопка выйдет за пределы article и в целом тут у нас два блока которые надо обернуть -->
+            <div>
+                <article>
+                    <!-- В uppercase лучше не писать в HTML, стилями -->
+                    <h1>OUR STRONG ORGANISATION</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <!-- Кнопка не часть article, возможно ссылка -->
+                    <button type="button">Contact Us</button>
+                </article>
+            </div>
             <div>
                 <video controls src="video.mp4">
                     Ваш браузер не поддерживает встроенные видео. Попробуйте скачать его по
@@ -29,7 +39,9 @@
                 </video>
             </div>
         </main>
+        <!-- Это полноценная секция. footer - это чаще всего какая-то вспомогательная полоска с навигацией, контактами и тд -->
         <footer>
+            <!-- Нужна обертка и для article. Экран явно делится на две области -->
             <article>
                 <h2>
                     DO YOU KNOW WE CAN PROVIDE FOR YOU?
@@ -37,13 +49,18 @@
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
+
+                <!-- Кнопка не часть article, возможно ссылка -->
                 <a href="/learn_more">Learn more</a>
             </article>
             <div>
+                <!-- 4 однотипные карточки - список ul>li>div -->
                 <section>
                     <img src="management_icon.png" alt="Management icon">
+                    <!-- h3 -->
                     <h5>Management</h5>
                     <p>
+                        <!-- small скорее всего лишнее -->
                         <small>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </small>
@@ -80,3 +97,35 @@
         </footer>
     </body>
 </html>
+
+<!--
+// Приблизительная структура подобных страниц
+
+<html>
+    <head></head>
+    <body>
+        <div> - общий контейнер (кастомизировать скролл, задать общие отступы и тд и тд. Иногда нужно даже 2 или 3)
+            <header>
+                <div></div> - для позиционирования контента внутри секции
+            </header>
+            <main>
+                <section>
+                    <div></div> - для позиционирования контента внутри секции
+                </section>
+                <section>
+                    <div></div> - для позиционирования контента внутри секции
+                </section>
+                <section>
+                    <div></div> - для позиционирования контента внутри секции
+                </section>
+            </main>
+            <footer>
+                <div></div> - для позиционирования контента внутри секции
+            </footer>
+        </div>
+    </body>
+</html>
+
+// header, footer иногда могут быть вложены в section
+
+-->
