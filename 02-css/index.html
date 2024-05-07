@@ -8,107 +8,86 @@
     <title>Agency landing page</title>
 </head>
 <body>
-    <!-- wrapper/container -->
-    <div class="wrapper">
-        <header class="header">
-            <!--     header__content       -->
-            <div class="list-wrapper">
-                <nav class="navigation">
-                    <!--     navigation__list       -->
-                    <ul class="list">
-                        <!--     navigation__item       -->
-                        <li class="list__item list__item_active">
-                            <!--     navigation__link    -->
-                            <a class="list__link" href="/home">Home</a>
-                        </li>
-                        <li class="list__item"><a class="list__link" href="/portfolio">Portfolio</a></li>
-                        <li class="list__item"><a class="list__link" href="/about_us">About us</a></li>
-                        <li class="list__item"><a class="list__link" href="/contact">Contact</a></li>
-                    </ul>
-                </nav>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__content">
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item--active">
+                        <a class="navigation__link" href="/home">Home</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="/portfolio">Portfolio</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="/about_us">About us</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <section class="section description">
+            <div class="description__content">
+                <div class="description__left-part">
+                    <article class="description__article">
+                        <h1 class="description__title">Our strong organisation</h1>
+                        <p class="description__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                    </article>
+                    <a class="description__link" href="/contacts">Contact Us</a>
+                </div>
+                <div class="description__right-part">
+                    <video class="description__video" controls src="video.mp4"> Ваш браузер не поддерживает встроенные видео. Попробуйте скачать его по <a class="description__video-link" href="video.mp4">этой ссылке</a>. </video>
+                </div>
             </div>
-        </header>
-        <main class="main">
-            <!--     section - общий, description - Бэм       -->
-            <section class="section">
-                <!--     description__content       -->
-                <div class="description">
-                    <!--     description__left-part       -->
-                    <div class="content">
-                        <!--     description__article       -->
-                        <article class="content__article">
-                            <!--     description__title       -->
-                            <h1 class="content__header">Our strong organisation</h1>
-                            <!--     description__text       -->
-                            <p class="content__text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        </article>
-                        <a class="content__link" href="/contacts">Contact Us</a>
-                    </div>
-                    <!--     description__left-part       -->
-                    <div class="video">
-                        <video class="video__player" controls src="video.mp4">
-                            Ваш браузер не поддерживает встроенные видео. Попробуйте скачать его по
-                            <a class="video__link" href="video.mp4">этой ссылке</a>.
-                        </video>
-                    </div>
+        </section>
+        <section class="section services">
+            <div class="services__content">
+                <div class="services__left-part">
+                    <article class="services__article">
+                        <h2 class="services__title">Do you know we can provide for you?</h2>
+                        <p class="services__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                    </article>
+                    <a class="services__link" href="/learn_more">Learn more</a>
                 </div>
-            </section>
-            <section class="section">
-                <div class="services">
-                    <div class="content">
-                        <article class="content__article">
-                            <h2 class="content__header">Do you know we can provide for you?</h2>
-                            <p class="content__text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        </article>
-                        <a class="content__link" href="/learn_more">Learn more</a>
-                    </div>
-                    <div class="list-wrapper">
-                        <ul class="list">
-                            <li class="list__item">
-                                <div class="list__item-wrapper">
-                                    <img class="list__item-logo" src="management_icon.png" alt="Management icon">
-                                    <h3 class="list__item-header">Management</h3>
-                                    <p class="list__item-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="list__item">
-                                <div class="list__item-wrapper">
-                                    <img class="list__item-logo" src="ui_icon.png" alt="UI/UX design icon">
-                                    <h3 class="list__item-header">UI/UX design</h3>
-                                    <p class="list__item-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="list__item">
-                                <div class="list__item-wrapper">
-                                    <img class="list__item-logo" src="logo_icon.png" alt="Logo/Branding icon">
-                                    <h3 class="list__item-header">Logo/Branding</h3>
-                                    <p class="list__item-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="list__item">
-                                <div class="list__item-wrapper">
-                                    <img class="list__item-logo" src="animation_icon.png" alt="Animation icon">
-                                    <h3 class="list__item-header">Animation</h3>
-                                    <p class="list__item-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="services__right-part">
+                    <ul class="services__list">
+                        <li class="services__item">
+                            <div class="services__wrapper">
+                                <img class="services__logo" src="management_icon.png" alt="Management icon">
+                                <h3 class="services__title">Management</h3>
+                                <p class="services__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                            </div>
+                        </li>
+                        <li class="services__item">
+                            <div class="services__wrapper">
+                                <img class="services__logo" src="ui_icon.png" alt="UI/UX design icon">
+                                <h3 class="services__title">UI/UX design</h3>
+                                <p class="services__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                            </div>
+                        </li>
+                        <li class="services__item">
+                            <div class="services__wrapper">
+                                <img class="services__logo" src="branding_icon.png" alt="Logo/Branding icon">
+                                <h3 class="services__title">Logo/Branding</h3>
+                                <p class="services__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                            </div>
+                        </li>
+                        <li class="services__item">
+                            <div class="services__wrapper">
+                                <img class="services__logo" src="animation_icon.png" alt="Animation icon">
+                                <h3 class="services__title">Animation</h3>
+                                <p class="services__text"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-            </section>
-        </main>
-    </div>
+            </div>
+        </section>
+    </main>
+</div>
 </body>
 </html>
