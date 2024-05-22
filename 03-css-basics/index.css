@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "Play";
+  src: url("./fonts/Play-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Play";
+  src: url("./fonts/Play-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url("./fonts/AlegreyaSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  background-color: #F5F5F5;
+  background-image: url("images/background.png");
+  background-position: right 7em bottom 2em;
+  background-repeat: no-repeat;
+  padding: 1em 5em 2em;
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  color: #292929;
+  font-size: 16px;
+}
+
+.header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo {
+  display: inline-block;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.navigation {
+  display: inline-block;
+}
+
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.navigation__item {
+  display: inline;
+  list-style-type: none;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+}
+
+.navigation__link {
+  font-family: "AlegreyaSans", sans-serif;
+  text-decoration: none;
+  color: #292929;
+  font-size: 18px;
+}
+
+.contact {
+  display: inline-block;
+  float: right;
+  width: 10em;
+  height: 2em;
+  vertical-align: middle;
+}
+
+.contact__icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.contact__phone {
+  font-size: 18px;
+  text-decoration: none;
+  color: #292929;
+  vertical-align: middle;
+}
+
+.order__button {
+  background-color: #E01F3D;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border: none;
+  padding: 21px 41px 21px 41px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  border-radius: 100px;
+  font-weight: 700;
+}
+
+.description__title {
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  max-width: 400px;
+}
+
+.description__text {
+  font-family: "AlegreyaSans", sans-serif;
+  font-size: 21px;
+  max-width: 332px;
+}
+
+.advantages {
+  position: relative;
+  padding-top: 3em;
+}
+
+.advantages__item {
+  display: inline-block;
+  width: 220px;
+  height: 56px;
+}
