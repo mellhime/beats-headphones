@@ -10,78 +10,89 @@
 </head>
 <body>
 <div class="wrapper">
-    <header class="header">
-        <div class="header__content">
-            <div class="logo">
-                <svg class="logo__icon">
-                    <use href="./images/icons/sprite.svg#logo"></use>
-                </svg>
-            </div>
-            <nav class="navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="/about_us">О нас</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="/headphones">Наушники</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="/team">Команда</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="/colors">Цвета</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="/reviews">Отзывы</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="/work">Как мы работаем</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a class="navigation__link" href="/contacts">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="contact">
-                <svg class="contact__icon">
-                    <use href="./images/icons/sprite.svg#phone"></use>
-                </svg>
-                <a class="contact__phone" href="tel:88009039090">8 800 903 90 90</a>
-            </div>
-        </div>
-    </header>
     <main class="main">
-        <section class="section description">
-            <div class="description__content">
-                <h1 class="description__title">Беспроводные наушники Beats Solo 3</h1>
-                <p class="description__text">Встречайте новую версию наушников из линейки Powerbeats.</p>
-            </div>
-            <div class="order">
-                <button class="order__button">Заказать</button>
-            </div>
-        </section>
-        <section class="section advantages">
-            <div class="advantages__content">
-                <ul class="advantages__list">
-                    <li class="advantages__item">
-                        <svg class="sound__icon">
-                            <use href="./images/icons/sprite.svg#ear"></use>
-                            <text x="60" y="35" class="sound__text">Безупречный звук</text>
-                        </svg>
-                    </li>
-                    <li class="advantages__item">
-                        <svg class="battery__icon">
-                            <use href="./images/icons/sprite.svg#battery"></use>
-                            <text x="60" y="35" class="battery__text">До 40 часов работы</text>
-                        </svg>
-                    </li>
-                    <li class="advantages__item">
-                        <svg class="charging__icon">
-                            <use href="./images/icons/sprite.svg#socket"></use>
-                            <text x="60" y="35" class="charging__text">Технология Fast Fuel</text>
-                        </svg>
-                    </li>
-                </ul>
+        <section>
+            <div class="section__wrapper">
+                <header class="header">
+                    <div class="header__content">
+                        <div class="logo">
+                            <a class="logo__link" href="#">
+                                <svg class="logo__icon">
+                                    <use href="./images/icons/sprite.svg#logo"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <nav class="navigation">
+                            <ul class="navigation__list">
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">О нас</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">Наушники</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">Команда</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">Цвета</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">Отзывы</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">Как мы работаем</a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__link" href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="contact">
+                            <svg class="contact__icon">
+                                <use href="./images/icons/sprite.svg#phone"></use>
+                            </svg>
+                            <a class="contact__phone" href="tel:88009039090">8 800 903 90 90</a>
+                        </div>
+                    </div>
+                </header>
+                <div class="info">
+                    <div class="description">
+                        <div class="intro">
+                            <h1 class="intro__title">Беспроводные наушники Beats Solo 3</h1>
+                            <p class="intro__text">Встречайте новую версию наушников из линейки Powerbeats.</p>
+                        </div>
+                        <div class="order">
+                            <button class="order__button">Заказать</button>
+                        </div>
+                        <div class="advantages">
+                            <div class="advantages__content">
+                                <ul class="advantages__list">
+                                    <li class="advantages__item">
+                                        <svg class="sound__icon">
+                                            <use href="./images/icons/sprite.svg#ear"></use>
+                                        </svg>
+                                        <p class="sound__text">Безупречный звук</p>
+                                    </li>
+                                    <li class="advantages__item">
+                                        <svg class="battery__icon">
+                                            <use href="./images/icons/sprite.svg#battery"></use>
+                                        </svg>
+                                        <p class="battery__text">До 40 часов работы</p>
+                                    </li>
+                                    <li class="advantages__item">
+                                        <svg class="charging__icon">
+                                            <use href="./images/icons/sprite.svg#socket"></use>
+                                        </svg>
+                                        <p class="charging__text">Технология Fast Fuel</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img class="image__content" src="images/background.png" alt="image">
+                    </div>
+                </div>
             </div>
         </section>
     </main>
