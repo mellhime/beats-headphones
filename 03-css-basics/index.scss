@@ -1,163 +1,25 @@
-@import "normalize.css";
-
-$color-black: #292929;
-$color-white: #FFFFFF;
-$color-grey: #666666;
-$color-red: #E01F3D;
-$background-color: #F5F5F5;
-$button-color: #E01F3D;
-
+@import "styles/normalize.css";
+@import "styles/base.scss";
+@import "styles/info_section";
+@import "styles/specification_section";
 
 @font-face {
     font-family: "Play";
-    src: url("./fonts/Play-Bold.woff");
+    src: url("fonts/Play-Bold.woff");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Play";
-    src: url("./fonts/Play-Regular.woff");
+    src: url("fonts/Play-Regular.woff");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "AlegreyaSans";
-    src: url("./fonts/AlegreyaSans-Regular.woff");
+    src: url("fonts/AlegreyaSans-Regular.woff");
     font-weight: 400;
     font-style: normal;
-}
-
-html {
-    background-color: $background-color;
-    font-family: "Play", sans-serif;
-    font-size: 16px;
-}
-
-.wrapper {
-    font-weight: 400;
-    color: $color-black;
-    max-width: 940px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.section__wrapper {
-    margin-top: 24px;
-    margin-bottom: 50px;
-}
-
-.header__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo__icon {
-    width: 40px;
-    height: 40px;
-}
-
-.navigation__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 650px;
-}
-
-.navigation__link {
-    font-family: "AlegreyaSans", sans-serif;
-    color: $color-black;
-    font-size: 18px;
-}
-
-.contact {
-    display: flex;
-    align-items: center;
-    width: 160px;
-    gap: 5px;
-}
-
-.contact__icon {
-    width: 14px;
-    height: 14px;
-}
-
-.contact__phone {
-    font-size: 18px;
-    color: $color-black;
-}
-
-.order__button {
-    background-color: $color-red;
-    color: $color-white;
-    text-transform: uppercase;
-    border: none;
-    padding: 21px 41px 21px 41px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 100px;
-    font-weight: 700;
-    margin: 36px 2px 4px;
-}
-
-.intro__title {
-    font-weight: 700;
-    font-size: 48px;
-    text-transform: uppercase;
-    max-width: 400px;
-    margin-top: 94px;
-}
-
-.intro__text {
-    font-family: "AlegreyaSans", sans-serif;
-    font-size: 21px;
-    max-width: 332px;
-}
-
-.advantages__list {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-top: 70px;
-}
-
-.advantages__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 195px;
-    height: 56px;
-}
-
-.sound__icon {
-    width: 52px;
-    height: 52px;
-    margin-right: 11px;
-}
-
-.battery__icon {
-    width: 52px;
-    height: 52px;
-    margin-right: 11px;
-}
-
-.charging__icon {
-    width: 52px;
-    height: 52px;
-    margin-right: 11px;
-}
-
-.intro {
-    max-width: 400px;
-}
-
-.info {
-    display: flex;
-}
-
-.image {
-    margin-top: 47px;
-    margin-left: -15px;
 }
