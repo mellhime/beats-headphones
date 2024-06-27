@@ -1,6 +1,12 @@
+.info {
+  background-color: $color-light-grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .info__wrapper {
-  margin-top: 24px;
-  margin-bottom: 50px;
+  padding-top: 24px;
 }
 
 .header__content {
@@ -44,19 +50,20 @@
   color: $color-black;
 }
 
-.info {
+.info__description {
   display: flex;
+  align-items: center;
+  margin-top: 47px;
 }
 
-.description__title {
+.info__title {
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
   max-width: 400px;
-  margin-top: 94px;
 }
 
-.description__text {
+.info__text {
   font-family: "AlegreyaSans", sans-serif;
   font-size: 21px;
   max-width: 332px;
@@ -69,25 +76,23 @@
   border: none;
   padding: 21px 41px 21px 41px;
   text-align: center;
-  text-decoration: none;
   border-radius: 100px;
   font-weight: 700;
   margin: 36px 2px 4px;
 }
 
-.image-headphones {
-  margin-top: 47px;
+.info__image {
   margin-left: -15px;
 }
 
-.advantages__list {
+.info__list {
   display: flex;
   justify-content: left;
   align-items: center;
   margin-top: 70px;
 }
 
-.advantages__item {
+.info__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,20 +100,12 @@
   height: 56px;
 }
 
-.sound__icon {
+.info__icon {
   width: 52px;
   height: 52px;
   margin-right: 11px;
 }
 
-.battery__icon {
-  width: 52px;
-  height: 52px;
-  margin-right: 11px;
-}
-
-.charging__icon {
-  width: 52px;
-  height: 52px;
-  margin-right: 11px;
+.info__advantages {
+  margin-top: 70px;
 }

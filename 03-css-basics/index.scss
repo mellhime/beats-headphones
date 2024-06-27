@@ -1,25 +1,25 @@
 @import "styles/normalize.css";
-@import "styles/base.scss";
-@import "styles/info_section";
-@import "styles/specification_section";
+@import "styles/_base.scss";
+@import "styles/_info_section.scss";
+@import "styles/_specification_section.scss";
 
 @font-face {
     font-family: "Play";
-    src: url("fonts/Play-Bold.woff");
+    src: url("fonts/Play-Bold.woff") format('woff'), url("./fonts/Play-Bold.ttf") format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Play";
-    src: url("fonts/Play-Regular.woff");
+    src: url("fonts/Play-Regular.woff") format('woff'), url("./fonts/Play-Regular.ttf") format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "AlegreyaSans";
-    src: url("fonts/AlegreyaSans-Regular.woff");
+    src: url("fonts/AlegreyaSans-Regular.woff") format('woff'), url("./fonts/AlegreyaSans-Regular.ttf") format('truetype');
     font-weight: 400;
     font-style: normal;
 }

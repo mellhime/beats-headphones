@@ -12,7 +12,7 @@
 <div class="wrapper">
     <main class="main">
         <section class="section info">
-            <div class="info__wrapper">
+            <div class="container info__wrapper">
                 <header class="header">
                     <div class="header__content">
                         <div class="logo">
@@ -55,103 +55,97 @@
                         </div>
                     </div>
                 </header>
-                <div class="info">
-                    <div class="description">
-                        <div class="description__intro">
-                            <h1 class="description__title">Беспроводные наушники Beats Solo 3</h1>
-                            <p class="description__text">Встречайте новую версию наушников из линейки Powerbeats.</p>
-                        </div>
+                <div class="info__description">
+                    <div class="info__content">
+                        <h1 class="info__title">Беспроводные наушники Beats Solo 3</h1>
+                        <p class="info__text">Встречайте новую версию наушников из линейки Powerbeats.</p>
                         <div class="order">
                             <button class="order__button">Заказать</button>
                         </div>
-                        <div class="advantages">
-                            <div class="advantages__content">
-                                <ul class="advantages__list">
-                                    <li class="advantages__item">
-                                        <svg class="sound__icon">
-                                            <use href="./images/icons/sprite.svg#ear"></use>
-                                        </svg>
-                                        <p class="sound__text">Безупречный звук</p>
-                                    </li>
-                                    <li class="advantages__item">
-                                        <svg class="battery__icon">
-                                            <use href="./images/icons/sprite.svg#battery"></use>
-                                        </svg>
-                                        <p class="battery__text">До 40 часов работы</p>
-                                    </li>
-                                    <li class="advantages__item">
-                                        <svg class="charging__icon">
-                                            <use href="./images/icons/sprite.svg#socket"></use>
-                                        </svg>
-                                        <p class="charging__text">Технология Fast Fuel</p>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="info__advantages">
+                            <ul class="info__list">
+                                <li class="info__item">
+                                    <svg class="info__icon">
+                                        <use href="./images/icons/sprite.svg#ear"></use>
+                                    </svg>
+                                    <p class="info__text">Безупречный звук</p>
+                                </li>
+                                <li class="info__item">
+                                    <svg class="info__icon">
+                                        <use href="./images/icons/sprite.svg#battery"></use>
+                                    </svg>
+                                    <p class="info__text">До 40 часов работы</p>
+                                </li>
+                                <li class="info__item">
+                                    <svg class="info__icon">
+                                        <use href="./images/icons/sprite.svg#socket"></use>
+                                    </svg>
+                                    <p class="info__text">Технология Fast Fuel</p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="image-headphones">
-                        <img class="image-headphones__source" src="images/headphones.png" alt="headphones">
+                    <div class="info__image">
+                        <img class="info__headphones" src="images/headphones.png" alt="headphones">
                     </div>
                 </div>
             </div>
         </section>
         <section class="section specification">
-            <div class=specification__wrapper">
+            <div class="container specification__wrapper">
                 <div class="specification__heading">
                     <h2 class="specification__title">Почему beats solo 3?</h2>
-                    <p class="specification__text">
+                    <p class="specification__subtitle">
                         Процессор W1 работает невероятно эффективно и позволяет легко
                         подключать наушники к различным устройствам Apple.
                     </p>
                 </div>
                 <div class="specification__points">
-                    <ul class="points__list">
-                        <li class="points__item">
-                            <svg class="background-circle__icon">
-                                <use href="./images/icons/sprite.svg#grey-circle"></use>
-                            </svg>
-                            <svg class="long-battery__icon">
-                                <use href="./images/icons/sprite.svg#big-battery"></use>
-                            </svg>
-                            <h3 class="long-battery__header">40 часов работы</h3>
-                            <p class="long-battery__text">
+                    <ul class="specification__list">
+                        <li class="specification__item">
+                            <div class="specification__background-icon">
+                                <svg class="specification__icon">
+                                    <use href="./images/icons/sprite.svg#big-battery"></use>
+                                </svg>
+                            </div>
+                            <h3 class="specification__header">40 часов работы</h3>
+                            <p class="specification__text">
                                 Наушники Beats Solo3 могут работать
                                 до 40 часов без подзарядки, чтобы вы
                                 могли пользоваться ими каждый день.
                             </p>
                         </li>
-                        <li class="points__separator">
-                            <svg class="separator__icon">
+<!--                    TODO make separators with ::after pseudo-element-->
+                        <li class="specification__separator">
+                            <svg class="specification__separator-icon">
                                 <use href="./images/icons/sprite.svg#combined-shape"></use>
                             </svg>
                         </li>
-                        <li class="points__item">
-                            <svg class="background-circle__icon">
-                                <use href="./images/icons/sprite.svg#grey-circle"></use>
-                            </svg>
-                            <svg class="sound-quality__icon">
-                                <use href="./images/icons/sprite.svg#sound"></use>
-                            </svg>
-                            <h3 class="sound-quality__header">Фирменное звучание</h3>
-                            <p class="sound-quality__text">Фирменное звучание Beats в наушниках
+                        <li class="specification__item">
+                            <div class="specification__background-icon">
+                                <svg class="specification__icon">
+                                    <use href="./images/icons/sprite.svg#sound"></use>
+                                </svg>
+                            </div>
+                            <h3 class="specification__header">Фирменное звучание</h3>
+                            <p class="specification__text">Фирменное звучание Beats в наушниках
                                 с технологией Bluetooth класса
                                 1 будет сопровождать вас повсюду —
                                 куда бы вы ни отправились.</p>
                         </li>
-                        <li class="points__separator">
-                            <svg class="separator__icon">
+                        <li class="specification__separator">
+                            <svg class="specification__separator-icon">
                                 <use href="./images/icons/sprite.svg#combined-shape"></use>
                             </svg>
                         </li>
-                        <li class="points__item">
-                            <svg class="background-circle__icon">
-                                <use href="./images/icons/sprite.svg#grey-circle"></use>
-                            </svg>
-                            <svg class="fast-charging__icon">
-                                <use href="./images/icons/sprite.svg#clock"></use>
-                            </svg>
-                            <h3 class="fast-charging__header">Быстрая зарядка</h3>
-                            <p class="fast-charging__text">Благодаря технологии Fast Fuel
+                        <li class="specification__item">
+                            <div class="specification__background-icon">
+                                <svg class="specification__icon">
+                                    <use href="./images/icons/sprite.svg#clock"></use>
+                                </svg>
+                            </div>
+                            <h3 class="specification__header">Быстрая зарядка</h3>
+                            <p class="specification__text">Благодаря технологии Fast Fuel
                                 всего через 5 минут зарядки вы
                                 сможете слушать музыку ещё 3 часа.</p>
                         </li>

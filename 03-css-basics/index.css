@@ -7,19 +7,32 @@ html {
 .wrapper {
   font-weight: 400;
   color: #292929;
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .section {
-  width: 1100px;
-  height: 652px;
+  height: 100vh;
+}
+
+.container {
+  width: 940px;
+  height: 100%;
+}
+
+.info {
+  background-color: #F5F5F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .info__wrapper {
-  margin-top: 24px;
-  margin-bottom: 50px;
+  padding-top: 24px;
 }
 
 .header__content {
@@ -79,21 +92,24 @@ html {
   color: #292929;
 }
 
-.info {
+.info__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 47px;
 }
 
-.description__title {
+.info__title {
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
   max-width: 400px;
-  margin-top: 94px;
 }
 
-.description__text {
+.info__text {
   font-family: "AlegreyaSans", sans-serif;
   font-size: 21px;
   max-width: 332px;
@@ -106,18 +122,16 @@ html {
   border: none;
   padding: 21px 41px 21px 41px;
   text-align: center;
-  text-decoration: none;
   border-radius: 100px;
   font-weight: 700;
   margin: 36px 2px 4px;
 }
 
-.image-headphones {
-  margin-top: 47px;
+.info__image {
   margin-left: -15px;
 }
 
-.advantages__list {
+.info__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,7 +144,7 @@ html {
   margin-top: 70px;
 }
 
-.advantages__item {
+.info__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,50 +158,63 @@ html {
   height: 56px;
 }
 
-.sound__icon {
+.info__icon {
   width: 52px;
   height: 52px;
   margin-right: 11px;
 }
 
-.battery__icon {
-  width: 52px;
-  height: 52px;
-  margin-right: 11px;
+.info__advantages {
+  margin-top: 70px;
 }
 
-.charging__icon {
-  width: 52px;
-  height: 52px;
-  margin-right: 11px;
+.specification {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .specification__wrapper {
-  margin: 103px 82px 89px;
-  background-color: #FFFFFF;
+  margin-top: 100px;
+}
+
+.specification__heading {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .specification__title {
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
-  max-width: 600px;
   text-align: center;
-  margin-top: 103px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.specification__text {
+.specification__subtitle {
   font-size: 16px;
-  max-width: 590px;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 18px;
+  max-width: 600px;
+  color: #666666;
 }
 
-.points__list {
+.specification__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,103 +222,83 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 62px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.specification__item {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.points__item {
-  text-align: center;
-  max-width: 276px;
-  height: 290px;
+.specification__separator {
+  margin-top: 50px;
 }
 
-.separator__icon {
+.specification__separator-icon {
   width: 67px;
   height: 21px;
-  margin-bottom: 140px;
 }
 
-.background-circle__icon {
-  width: 125px;
-  height: 125px;
+.specification__background-icon {
+  background-color: #F5F5F5;
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.long-battery__icon {
+.specification__icon {
   width: 68px;
   height: 68px;
-  position: absolute;
-  margin-left: -95px;
-  margin-top: 30px;
 }
 
-.sound-quality__icon {
-  width: 68px;
-  height: 68px;
-  position: absolute;
-  margin-left: -95px;
-  margin-top: 30px;
-}
-
-.fast-charging__icon {
-  width: 68px;
-  height: 68px;
-  position: absolute;
-  margin-left: -95px;
-  margin-top: 30px;
-}
-
-.long-battery__header {
+.specification__header {
   font-weight: 700;
   font-size: 24px;
   margin-top: 24px;
 }
 
-.long-battery__text {
+.specification__text {
   font-size: 16px;
   max-width: 247px;
   margin-top: 7px;
-}
-
-.sound-quality__header {
-  font-weight: 700;
-  font-size: 24px;
-  margin-top: 24px;
-}
-
-.sound-quality__text {
-  font-size: 16px;
-  max-width: 247px;
-  margin-top: 7px;
-}
-
-.fast-charging__header {
-  font-weight: 700;
-  font-size: 24px;
-  margin-top: 24px;
-}
-
-.fast-charging__text {
-  font-size: 16px;
-  max-width: 247px;
-  margin-top: 7px;
+  color: #666666;
 }
 
 @font-face {
   font-family: "Play";
-  src: url("fonts/Play-Bold.woff");
+  src: url("fonts/Play-Bold.woff") format("woff"), url("./fonts/Play-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Play";
-  src: url("fonts/Play-Regular.woff");
+  src: url("fonts/Play-Regular.woff") format("woff"), url("./fonts/Play-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "AlegreyaSans";
-  src: url("fonts/AlegreyaSans-Regular.woff");
+  src: url("fonts/AlegreyaSans-Regular.woff") format("woff"), url("./fonts/AlegreyaSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }

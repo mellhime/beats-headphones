@@ -8,18 +8,18 @@ $button-color: #E01F3D;
 html {
   font-family: "Play", sans-serif;
   font-size: 16px;
-  // background-color: $color-light-grey;
 }
 
 .wrapper {
   font-weight: 400;
   color: $color-black;
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .section {
-  width: 1100px;
-  height: 652px;
+  height: 100vh;
+}
+
+.container {
+  width: 940px;
+  height: 100%;
 }
