@@ -1,0 +1,304 @@
+@import "styles/normalize.css";
+html {
+  font-family: "Play", sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  font-weight: 400;
+  color: #292929;
+}
+
+.section {
+  height: 100vh;
+}
+
+.container {
+  width: 940px;
+  height: 100%;
+}
+
+.info {
+  background-color: #F5F5F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.info__wrapper {
+  padding-top: 24px;
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 650px;
+}
+
+.navigation__link {
+  font-family: "AlegreyaSans", sans-serif;
+  color: #292929;
+  font-size: 18px;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 160px;
+  gap: 5px;
+}
+
+.contact__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.contact__phone {
+  font-size: 18px;
+  color: #292929;
+}
+
+.info__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 47px;
+}
+
+.info__title {
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  max-width: 400px;
+}
+
+.info__text {
+  font-family: "AlegreyaSans", sans-serif;
+  font-size: 21px;
+  max-width: 332px;
+}
+
+.order__button {
+  background-color: #E01F3D;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border: none;
+  padding: 21px 41px 21px 41px;
+  text-align: center;
+  border-radius: 100px;
+  font-weight: 700;
+  margin: 36px 2px 4px;
+}
+
+.info__image {
+  margin-left: -15px;
+}
+
+.info__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 70px;
+}
+
+.info__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 195px;
+  height: 56px;
+}
+
+.info__icon {
+  width: 52px;
+  height: 52px;
+  margin-right: 11px;
+}
+
+.info__advantages {
+  margin-top: 70px;
+}
+
+.specification {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.specification__wrapper {
+  margin-top: 100px;
+}
+
+.specification__heading {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.specification__title {
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.specification__subtitle {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 18px;
+  max-width: 600px;
+  color: #666666;
+}
+
+.specification__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 62px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.specification__item {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.specification__separator {
+  margin-top: 50px;
+}
+
+.specification__separator-icon {
+  width: 67px;
+  height: 21px;
+}
+
+.specification__background-icon {
+  background-color: #F5F5F5;
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.specification__icon {
+  width: 68px;
+  height: 68px;
+}
+
+.specification__header {
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 24px;
+}
+
+.specification__text {
+  font-size: 16px;
+  max-width: 247px;
+  margin-top: 7px;
+  color: #666666;
+}
+
+@font-face {
+  font-family: "Play";
+  src: url("fonts/Play-Bold.woff") format("woff"), url("./fonts/Play-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Play";
+  src: url("fonts/Play-Regular.woff") format("woff"), url("./fonts/Play-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AlegreyaSans";
+  src: url("fonts/AlegreyaSans-Regular.woff") format("woff"), url("./fonts/AlegreyaSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}

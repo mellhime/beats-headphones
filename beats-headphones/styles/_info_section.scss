@@ -1,0 +1,111 @@
+.info {
+  background-color: $color-light-grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info__wrapper {
+  padding-top: 24px;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 650px;
+}
+
+.navigation__link {
+  font-family: "AlegreyaSans", sans-serif;
+  color: $color-black;
+  font-size: 18px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  width: 160px;
+  gap: 5px;
+}
+
+.contact__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.contact__phone {
+  font-size: 18px;
+  color: $color-black;
+}
+
+.info__description {
+  display: flex;
+  align-items: center;
+  margin-top: 47px;
+}
+
+.info__title {
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  max-width: 400px;
+}
+
+.info__text {
+  font-family: "AlegreyaSans", sans-serif;
+  font-size: 21px;
+  max-width: 332px;
+}
+
+.order__button {
+  background-color: $color-red;
+  color: $color-white;
+  text-transform: uppercase;
+  border: none;
+  padding: 21px 41px 21px 41px;
+  text-align: center;
+  border-radius: 100px;
+  font-weight: 700;
+  margin: 36px 2px 4px;
+}
+
+.info__image {
+  margin-left: -15px;
+}
+
+.info__list {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.info__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 195px;
+  height: 56px;
+}
+
+.info__icon {
+  width: 52px;
+  height: 52px;
+  margin-right: 11px;
+}
+
+.info__advantages {
+  margin-top: 70px;
+}
