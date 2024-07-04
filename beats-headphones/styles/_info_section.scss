@@ -69,16 +69,18 @@
   max-width: 332px;
 }
 
+.order {
+  margin-top: 36px;
+}
+
 .order__button {
   background-color: $color-red;
   color: $color-white;
   text-transform: uppercase;
   border: none;
   padding: 21px 41px 21px 41px;
-  text-align: center;
   border-radius: 100px;
   font-weight: 700;
-  margin: 36px 2px 4px;
 }
 
 .info__image {

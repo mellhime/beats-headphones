@@ -45,6 +45,14 @@
   align-items: center;
 }
 
+.specification__item::after {
+  content: url('../images/icons/sprite.svg#combined-shape');
+  display: flex;
+  margin-top: 50px;
+  width: 67px;
+  height: 21px;
+}
+
 .specification__separator {
   margin-top: 50px;
 }

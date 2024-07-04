@@ -115,16 +115,18 @@ html {
   max-width: 332px;
 }
 
+.order {
+  margin-top: 36px;
+}
+
 .order__button {
   background-color: #E01F3D;
   color: #FFFFFF;
   text-transform: uppercase;
   border: none;
   padding: 21px 41px 21px 41px;
-  text-align: center;
   border-radius: 100px;
   font-weight: 700;
-  margin: 36px 2px 4px;
 }
 
 .info__image {
@@ -241,6 +243,16 @@ html {
           align-items: center;
 }
 
+.specification__item::after {
+  content: url("../images/icons/sprite.svg#combined-shape");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+  width: 67px;
+  height: 21px;
+}
+
 .specification__separator {
   margin-top: 50px;
 }
@@ -282,6 +294,219 @@ html {
   max-width: 247px;
   margin-top: 7px;
   color: #666666;
+}
+
+.purchase {
+  background-color: #F5F5F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.purchase__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 66px;
+}
+
+.purchase__description {
+  width: 419px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.purchase__grey-square {
+  width: 91px;
+  height: 91px;
+  background-color: #9A9A9A;
+  border: none;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.purchase__button {
+  text-align: center;
+}
+
+.purchase__icon {
+  width: 42px;
+  height: 42px;
+}
+
+.purchase__title {
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+.purchase__text {
+  color: #666666;
+  margin-top: 24px;
+}
+
+.purchase__options {
+  margin-top: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 90px;
+}
+
+.purchase__option-subtitle {
+  color: #666666;
+}
+
+.purchase__option-text {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.purchase__buying {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 24px;
+  gap: 13px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.purchase__price {
+  font-size: 36px;
+  color: #151515;
+  text-align: center;
+}
+
+.team {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.team__wrapper {
+  margin-top: 73px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.team__title {
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 53px;
+}
+
+.team__header {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+
+.team__name {
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+}
+
+.team__name::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 4.5px 7.8px 4.5px;
+  border-color: transparent transparent #E01F3D transparent;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-top: 7px;
+  margin-left: 3px;
+}
+
+.team__profession {
+  text-align: center;
+  margin-top: 11px;
+}
+
+.team__description {
+  text-align: center;
+  color: #666666;
+}
+
+.team__arrow-icon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 4.5px 7.8px 4.5px;
+  border-color: transparent transparent #E01F3D transparent;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 @font-face {
