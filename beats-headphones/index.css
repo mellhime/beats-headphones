@@ -31,8 +31,9 @@ html {
           justify-content: center;
 }
 
-.info__wrapper {
+.header {
   padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .header__content {
@@ -50,6 +51,10 @@ html {
 .logo__icon {
   width: 40px;
   height: 40px;
+}
+
+#logo > path {
+  fill: #E01F3D;
 }
 
 .navigation__list {
@@ -109,10 +114,11 @@ html {
   max-width: 400px;
 }
 
-.info__text {
+.info__synopsis {
   font-family: "AlegreyaSans", sans-serif;
   font-size: 21px;
   max-width: 332px;
+  margin-top: 22px;
 }
 
 .order {
@@ -183,10 +189,6 @@ html {
           justify-content: center;
 }
 
-.specification__wrapper {
-  margin-top: 100px;
-}
-
 .specification__heading {
   text-align: center;
   display: -webkit-box;
@@ -199,6 +201,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 100px;
 }
 
 .specification__title {
@@ -243,18 +246,22 @@ html {
           align-items: center;
 }
 
-.specification__item::after {
-  content: url("../images/icons/sprite.svg#combined-shape");
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 50px;
+.specification__item:not(:last-child)::after {
+  content: "";
+  background: url("/beats-headphones/images/icons/sprite.svg#combined-shape");
   width: 67px;
   height: 21px;
+  position: absolute;
+  margin-left: 23%;
+  margin-top: 50px;
 }
 
 .specification__separator {
   margin-top: 50px;
+}
+
+#combined-shape > path {
+  fill: #F5F5F5;
 }
 
 .specification__separator-icon {
@@ -301,15 +308,12 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.purchase__wrapper {
+.purchase__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,42 +323,24 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 66px;
 }
 
 .purchase__description {
   width: 419px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-top: 66px;
 }
 
-.purchase__grey-square {
+#gear > path {
+  fill: #FFFFFF;
+}
+
+.purchase__button {
   width: 91px;
   height: 91px;
   background-color: #9A9A9A;
   border: none;
-  border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.purchase__button {
-  text-align: center;
+  border-radius: 4px;
+  padding: 25px;
 }
 
 .purchase__icon {
@@ -379,7 +365,10 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 90px;
+  width: 60%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .purchase__option-subtitle {
@@ -413,16 +402,12 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.team__wrapper {
-  margin-top: 73px;
+.team__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,9 +415,6 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -443,6 +425,7 @@ html {
   font-size: 48px;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 73px;
 }
 
 .team__list {
@@ -453,23 +436,15 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 53px;
+  width: 100%;
 }
 
-.team__header {
-  margin-top: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 4px;
+.team__employee {
+  max-width: 220px;
 }
 
 .team__name {
+  margin-top: 25px;
   font-weight: 700;
   font-size: 18px;
   text-align: center;
@@ -487,6 +462,7 @@ html {
           transform: rotate(180deg);
   margin-top: 7px;
   margin-left: 3px;
+  cursor: pointer;
 }
 
 .team__profession {
@@ -497,16 +473,6 @@ html {
 .team__description {
   text-align: center;
   color: #666666;
-}
-
-.team__arrow-icon {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 4.5px 7.8px 4.5px;
-  border-color: transparent transparent #E01F3D transparent;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
 @font-face {

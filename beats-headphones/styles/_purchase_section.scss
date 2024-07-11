@@ -1,37 +1,31 @@
 .purchase {
   background-color: $color-light-grey;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-.purchase__wrapper {
+.purchase__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 66px;
 }
 
 .purchase__description {
   width: 419px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin-top: 66px;
 }
 
-.purchase__grey-square {
+#gear > path {
+  fill: $color-white;
+}
+
+.purchase__button {
   width: 91px;
   height: 91px;
   background-color: $color-middle-grey;
   border: none;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.purchase__button {
-  text-align: center;
+  border-radius: 4px;
+  padding: 25px;
 }
 
 .purchase__icon {
@@ -54,7 +48,8 @@
 .purchase__options {
   margin-top: 24px;
   display: flex;
-  gap: 90px;
+  width: 60%;
+  justify-content: space-between;
 }
 
 .purchase__option-subtitle {

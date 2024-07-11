@@ -5,15 +5,12 @@
   justify-content: center;
 }
 
-.specification__wrapper {
-  margin-top: 100px;
-}
-
 .specification__heading {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 100px;
 }
 
 .specification__title {
@@ -45,16 +42,22 @@
   align-items: center;
 }
 
-.specification__item::after {
-  content: url('../images/icons/sprite.svg#combined-shape');
-  display: flex;
-  margin-top: 50px;
+.specification__item:not(:last-child)::after {
+  content: "";
+  background: url('/beats-headphones/images/icons/sprite.svg#combined-shape');
   width: 67px;
   height: 21px;
+  position: absolute;
+  margin-left: 23%;
+  margin-top: 50px;
 }
 
 .specification__separator {
   margin-top: 50px;
+}
+
+#combined-shape > path {
+  fill: $color-light-grey;
 }
 
 .specification__separator-icon {
