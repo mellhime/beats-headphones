@@ -1,0 +1,51 @@
+.colors {
+  background-image: url('/beats-headphones/images/girl.png');
+  background-position: right;
+}
+
+.colors__container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.colors__header {
+  font-weight: 700;
+  font-size: 48px;
+  color: $color-white;
+  text-transform: uppercase;
+  margin-left: 84px;
+  margin-top: 115px;
+}
+
+.colors__list {
+  height: 100%;
+  display: flex;
+}
+
+.colors__item {
+  width: 102px;
+  color: $color-white;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: flex;
+  align-items: center;
+}
+
+.colors__item_silver {
+  background-color: $color-silver;
+}
+
+.colors__item_black {
+  background-color: $color-black;
+}
+
+.colors__item_red {
+  background-color: $color-red;
+}
+
+.colors__name {
+  margin-top: 34px;
+  font-weight: 700;
+  font-size: 36px;
+}

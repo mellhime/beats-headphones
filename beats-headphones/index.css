@@ -18,6 +18,15 @@ html {
   height: 100%;
 }
 
+.circle {
+  height: 83px;
+  width: 83px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 91px;
+}
+
 .info {
   background-color: #F5F5F5;
   display: -webkit-box;
@@ -341,6 +350,47 @@ html {
   border: none;
   border-radius: 4px;
   padding: 25px;
+  cursor: pointer;
+}
+
+.purchase__list {
+  position: absolute;
+  width: 273px;
+  height: 294px;
+  border-radius: 4px;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.purchase__button:hover + .purchase__list {
+  display: inline;
+}
+
+.purchase__point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 28px;
+  margin-right: 25px;
+  margin-left: 30px;
+}
+
+.purchase__point-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.purchase__point-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 18px;
 }
 
 .purchase__icon {
@@ -473,6 +523,153 @@ html {
 .team__description {
   text-align: center;
   color: #666666;
+}
+
+.colors {
+  background-image: url("/beats-headphones/images/girl.png");
+  background-position: right;
+}
+
+.colors__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.colors__header {
+  font-weight: 700;
+  font-size: 48px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-left: 84px;
+  margin-top: 115px;
+}
+
+.colors__list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.colors__item {
+  width: 102px;
+  color: #FFFFFF;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.colors__item_silver {
+  background-color: #999999;
+}
+
+.colors__item_black {
+  background-color: #292929;
+}
+
+.colors__item_red {
+  background-color: #E01F3D;
+}
+
+.colors__name {
+  margin-top: 34px;
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.reviews {
+  background-color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.reviews__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews__main-header {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 68px;
+  z-index: 1;
+}
+
+.reviews__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #F8FAF9;
+  margin-top: 32px;
+  padding: 42px;
+  width: 100%;
+}
+
+.reviews__text {
+  margin-top: 32px;
+  max-width: 600px;
+}
+
+.reviews__header {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.reviews__description {
+  color: #666666;
+  margin-top: 27px;
+}
+
+.reviews__author {
+  margin-top: 38px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.reviews__people {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 15px;
+  gap: 6px;
+}
+
+.reviews__person_active {
+  border-radius: 104px;
+  outline: 4px solid #E01F3D;
+  outline-offset: -4px;
 }
 
 @font-face {

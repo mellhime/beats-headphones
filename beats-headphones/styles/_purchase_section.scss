@@ -26,6 +26,43 @@
   border: none;
   border-radius: 4px;
   padding: 25px;
+  cursor: pointer;
+}
+
+.purchase__list {
+  position: absolute;
+  width: 273px;
+  height: 294px;
+  border-radius: 4px;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+// скопировала из фигмы
+// background-color: rgba(255, 255, 255, 0.8);
+// box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 0.06);
+
+.purchase__button:hover + .purchase__list {
+  display: inline;
+}
+
+.purchase__point {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  margin-right: 25px;
+  margin-left: 30px;
+}
+
+.purchase__point-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.purchase__point-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 18px;
 }
 
 .purchase__icon {

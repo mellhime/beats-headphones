@@ -5,6 +5,8 @@ $color-red: #E01F3D;
 $color-light-grey: #F5F5F5;
 $color-middle-grey: #9A9A9A;
 $color-middle-black: #151515;
+$color-silver: #999999;
+$color-light-grey-background: #F8FAF9;
 
 html {
   font-family: "Play", sans-serif;
@@ -23,4 +25,13 @@ html {
 .container {
   width: 940px;
   height: 100%;
+}
+
+.circle {
+  height: 83px;
+  width: 83px;
+  background-color: $color-white;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: 91px;
 }
