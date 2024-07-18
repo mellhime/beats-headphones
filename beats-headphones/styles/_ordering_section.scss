@@ -1,0 +1,122 @@
+.ordering {
+  display: flex;
+  justify-content: center;
+  background-color: $color-black;
+}
+
+.ordering__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ordering__title {
+  margin-top: 68px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: $color-white;
+}
+
+.ordering__form {
+  display: flex;
+  justify-content: space-between;
+  gap: 26px;
+  margin-top: 61px;
+}
+
+.ordering__label {
+  color: $color-white;
+  margin-top: 11px;
+}
+
+.ordering__form-left {
+  width: 50%;
+}
+
+.ordering__form-name-phone {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.ordering__form-name-phone > label {
+  width: 50%
+}
+
+.ordering__form-name-phone > label > input {
+  width: 100%
+}
+
+.ordering__form-address {
+  display: flex;
+  gap: 13px;
+}
+
+.ordering__form-address > label {
+  width: 25%;
+}
+
+.ordering__form-address > label > input {
+  width: 100%;
+}
+
+.ordering__form-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ordering__form-payment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.ordering__form-calling {
+  margin-top: 16px;
+}
+
+.ordering__label-radio, .ordering__label-checkbox {
+  color: $color-white;
+}
+
+.ordering__field {
+  margin-top: 6px;
+  height: 58px;
+}
+
+.ordering__field-checkbox {
+  width: 24px;
+  height: 24px;
+}
+
+.ordering__form-calling {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ordering__field-comment, .ordering__field-street {
+  width: 100%;
+}
+
+.ordering__field-comment {
+  height: 150px;
+}
+
+.ordering__buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 44px;
+}
+
+.cancel__button {
+  color: $color-white;
+  margin-left: 15px;
+}
+
+#checkbox-checked > path {
+  fill: $color-red;
+}

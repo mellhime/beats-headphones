@@ -1,0 +1,44 @@
+.contacts {
+  display: flex;
+  justify-content: center;
+  background-color: $color-white;
+}
+
+.contacts__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts__info {
+  margin-left: 86px;
+}
+
+.phone {
+  margin-top: 5px;
+}
+
+.contacts__social-media {
+  display: flex;
+  margin-right: 54px;
+  gap: 10px;
+}
+
+.contacts__icon {
+  width: 24px;
+  height: 24px;
+}
+
+#vk, #facebook, #instagram, #telegram > path {
+  fill: $color-icons-grey;
+}
