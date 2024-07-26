@@ -1,55 +1,55 @@
 .specification {
-  background-color: $color-white;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $color-white;
 }
 
 .specification__heading {
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
+  text-align: center;
 }
 
 .specification__title {
+  text-align: center;
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .specification__subtitle {
-  font-size: 16px;
-  text-align: center;
   margin-top: 18px;
   max-width: 600px;
+  text-align: center;
+  font-size: 16px;
   color: $color-grey;
 }
 
 .specification__list {
   display: flex;
   justify-content: space-between;
-  margin-top: 62px;
   align-items: start;
+  margin-top: 62px;
 }
 
 .specification__item {
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .specification__item:not(:last-child)::after {
-  content: "";
-  background: url('/beats-headphones/images/icons/sprite.svg#combined-shape');
-  width: 67px;
-  height: 21px;
   position: absolute;
   margin-left: 23%;
   margin-top: 50px;
+  width: 67px;
+  height: 21px;
+  content: "";
+  background: url('/beats-headphones/images/icons/sprite.svg#combined-shape');
 }
 
 .specification__separator {
@@ -66,13 +66,13 @@
 }
 
 .specification__background-icon {
-  background-color: $color-light-grey;
-  border-radius: 50%;
-  width: 128px;
-  height: 128px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 128px;
+  height: 128px;
+  background-color: $color-light-grey;
+  border-radius: 50%;
 }
 
 .specification__icon {
@@ -81,14 +81,14 @@
 }
 
 .specification__header {
+  margin-top: 24px;
   font-weight: 700;
   font-size: 24px;
-  margin-top: 24px;
 }
 
 .specification__text {
-  font-size: 16px;
-  max-width: 247px;
   margin-top: 7px;
+  max-width: 247px;
+  font-size: 16px;
   color: $color-grey;
 }

@@ -1,7 +1,7 @@
 .purchase {
-  background-color: $color-light-grey;
   display: flex;
   justify-content: center;
+  background-color: $color-light-grey;
 }
 
 .purchase__container {
@@ -11,8 +11,8 @@
 }
 
 .purchase__description {
-  width: 419px;
   margin-top: 66px;
+  width: 419px;
 }
 
 #gear > path {
@@ -35,12 +35,8 @@
   height: 294px;
   border-radius: 4px;
   display: none;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: $color-light-grey-background;
 }
-
-// скопировала из фигмы
-// background-color: rgba(255, 255, 255, 0.8);
-// box-shadow: 4px 4px 40px 0px rgba(0, 0, 0, 0.06);
 
 .purchase__button:hover + .purchase__list {
   display: inline;
@@ -60,9 +56,9 @@
 }
 
 .purchase__point-icon {
+  margin-right: 18px;
   width: 24px;
   height: 24px;
-  margin-right: 18px;
 }
 
 .purchase__icon {
@@ -71,22 +67,22 @@
 }
 
 .purchase__title {
+  margin-top: 25px;
   font-weight: 700;
   font-size: 36px;
   text-transform: uppercase;
-  margin-top: 25px;
 }
 
 .purchase__text {
-  color: $color-grey;
   margin-top: 24px;
+  color: $color-grey;
 }
 
 .purchase__options {
   margin-top: 24px;
   display: flex;
-  width: 60%;
   justify-content: space-between;
+  width: 60%;
 }
 
 .purchase__option-subtitle {
@@ -100,13 +96,13 @@
 
 .purchase__buying {
   display: flex;
+  align-items: center;
   margin-top: 24px;
   gap: 13px;
-  align-items: center;
 }
 
 .purchase__price {
+  text-align: center;
   font-size: 36px;
   color: $color-middle-black;
-  text-align: center;
 }

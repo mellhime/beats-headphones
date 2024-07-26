@@ -1,7 +1,7 @@
 .reviews {
-  background-color: $color-white;
   display: flex;
   justify-content: center;
+  background-color: $color-white;
 }
 
 .reviews__container {
@@ -11,24 +11,36 @@
 }
 
 .reviews__main-header {
+  margin-top: 68px;
+  z-index: 1;
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 68px;
-  z-index: 1;
 }
 
 .reviews__content {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  background-color: $color-light-grey-background;
   margin-top: 32px;
   padding: 42px;
   width: 100%;
+  background-color: $color-light-grey-background;
+}
+
+.reviews__content::after {
+  position: absolute;
+  left: 50%;
+  top: -61px;
+  height: 83px;
+  width: 83px;
+  content: "";
+  background-color: $color-white;
+  border-radius: 50%;
 }
 
 .reviews__text {
   margin-top: 32px;
+  margin-left: 40px;
   max-width: 600px;
 }
 
@@ -38,8 +50,8 @@
 }
 
 .reviews__description {
-  color: $color-grey;
   margin-top: 27px;
+  color: $color-grey;
 }
 
 .reviews__author {
@@ -55,7 +67,13 @@
   gap: 6px;
 }
 
-.reviews__person_active {
+.reviews__person {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews__person--active {
   border-radius: 104px;
   outline: 4px solid $color-red;
   outline-offset: -4px;

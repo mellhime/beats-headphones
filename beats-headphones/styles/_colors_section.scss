@@ -1,6 +1,7 @@
 .colors {
   background-image: url('/beats-headphones/images/girl.png');
-  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .colors__container {
@@ -10,42 +11,68 @@
 }
 
 .colors__header {
+  margin-left: 84px;
+  margin-top: 115px;
   font-weight: 700;
   font-size: 48px;
   color: $color-white;
   text-transform: uppercase;
-  margin-left: 84px;
-  margin-top: 115px;
 }
 
 .colors__list {
-  height: 100%;
   display: flex;
 }
 
 .colors__item {
-  width: 102px;
-  color: $color-white;
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
   display: flex;
-  align-items: center;
+  color: $color-white;
 }
 
-.colors__item_silver {
+.colors__name-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 102px;
+}
+
+.colors__wrapper_silver {
   background-color: $color-silver;
 }
 
-.colors__item_black {
+.colors__wrapper_black {
   background-color: $color-black;
 }
 
-.colors__item_red {
+.colors__wrapper_red {
   background-color: $color-red;
 }
 
 .colors__name {
-  margin-top: 34px;
+  margin-bottom: 40px;
   font-weight: 700;
   font-size: 36px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.colors__description-wrapper {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  background-color: $color-black-background;
+  opacity: 90%;
+}
+
+.colors__description {
+  margin-top: 31px;
+  margin-left: 38px;
+  margin-right: 53px;
+  font-family: "AlegreyaSans", sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.colors__description-wrapper--active {
+  overflow: visible;
+  width: 542px;
+  height: 100%;
 }
