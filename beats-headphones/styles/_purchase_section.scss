@@ -27,6 +27,7 @@
   border-radius: 4px;
   padding: 25px;
   cursor: pointer;
+  position: relative;
 }
 
 .purchase__list {
@@ -35,10 +36,12 @@
   height: 294px;
   border-radius: 4px;
   display: none;
+  left: 91px;
+  top: 0;
   background-color: $color-light-grey-background;
 }
 
-.purchase__button:hover + .purchase__list {
+.purchase__button:hover > .purchase__list {
   display: inline;
 }
 

@@ -342,6 +342,7 @@ html {
   border-radius: 4px;
   padding: 25px;
   cursor: pointer;
+  position: relative;
 }
 
 .purchase__list {
@@ -350,10 +351,12 @@ html {
   height: 294px;
   border-radius: 4px;
   display: none;
+  left: 91px;
+  top: 0;
   background-color: #F8FAF9;
 }
 
-.purchase__button:hover + .purchase__list {
+.purchase__button:hover > .purchase__list {
   display: inline;
 }
 
@@ -669,7 +672,7 @@ li:has(.team__name--active) .team__name::after {
 
 .reviews__content::after {
   position: absolute;
-  left: 50%;
+  left: calc(50% - 41px);
   top: -61px;
   height: 83px;
   width: 83px;
