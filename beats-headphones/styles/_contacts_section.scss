@@ -1,12 +1,21 @@
 .contacts {
   display: flex;
-  justify-content: center;
   background-color: $color-white;
 }
 
 .contacts__container {
   display: flex;
   flex-direction: column;
+  justify-content: end;
+  width: 100%;
+}
+
+.contacts__map {
+  background-image: url('/beats-headphones/images/map.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .footer {
@@ -35,8 +44,8 @@
 }
 
 .contacts__icon {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
 }
 
 #vk, #facebook, #instagram, #telegram > path {

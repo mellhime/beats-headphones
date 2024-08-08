@@ -7,10 +7,11 @@
 .ordering__container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .ordering__title {
-  margin-top: 68px;
   text-align: center;
   font-weight: 700;
   font-size: 48px;
@@ -27,11 +28,14 @@
 
 .ordering__label {
   color: $color-white;
-  margin-top: 11px;
 }
 
 .ordering__form-left {
   width: 50%;
+}
+
+.ordering__form-row {
+  margin-top: 10px;
 }
 
 .ordering__form-name-phone {
@@ -70,32 +74,26 @@
 .ordering__form-payment {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 24px;
   margin-top: 36px;
-}
-
-.ordering__form-calling {
-  margin-top: 16px;
-}
-
-.ordering__label-radio, .ordering__label-checkbox {
-  color: $color-white;
-}
-
-.ordering__field {
-  margin-top: 6px;
-  height: 58px;
-}
-
-.ordering__field-checkbox {
-  width: 24px;
-  height: 24px;
 }
 
 .ordering__form-calling {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-top: 16px;
+}
+
+.ordering__label-radio, .ordering__label-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.ordering__field {
+  margin-top: 10px;
+  height: 58px;
+  border-radius: 4px;
 }
 
 .ordering__field-comment, .ordering__field-street {
@@ -103,7 +101,8 @@
 }
 
 .ordering__field-comment {
-  height: 150px;
+  height: 155px;
+  resize: none;
 }
 
 .ordering__buttons {
@@ -119,4 +118,57 @@
 
 #checkbox-checked > path {
   fill: $color-red;
+}
+
+.ordering__field-text {
+  margin-left: 10px;
+}
+
+.ordering__field-checkbox-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  background-color: $color-white;
+  border-radius: 4px;
+}
+
+.ordering__field-mark {
+  display: none;
+  width: 10px;
+  height: 8px;
+  background-image: url('/beats-headphones/images/mark.svg');
+  background-repeat: no-repeat;
+}
+
+.ordering__field-checkbox, .ordering__field-radio {
+  width: 0;
+  height: 0;
+}
+
+.ordering__field-checkbox:checked + .ordering__field-mark {
+  display: block;
+}
+
+.ordering__field-radio-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: $color-white;
+  border-radius: 50%;
+}
+
+.ordering__field-radio-mark {
+  display: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: $color-red;
+}
+
+.ordering__field-radio:checked + .ordering__field-radio-mark {
+  display: block;
 }

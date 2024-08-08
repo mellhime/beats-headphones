@@ -338,64 +338,6 @@
                 </ul>
             </div>
         </section>
-        <section class="section colors">
-            <div class="container colors__container">
-                <h2 class="colors__header">Цвета</h2>
-                <ul class="colors__list">
-                    <li class="colors__item">
-                        <div class="colors__name-wrapper colors__wrapper_silver">
-                            <h3 class="colors__name">«Атласное серебро»</h3>
-                        </div>
-                        <div class="colors__description-wrapper colors__description-wrapper--active">
-                            <p class="colors__description">Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились.
-                                Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p>
-                        </div>
-                    </li>
-                    <li class="colors__item">
-                        <div class="colors__name-wrapper colors__wrapper_black">
-                            <h3 class="colors__name">«Чёрный матовый»</h3>
-                        </div>
-                        <div class="colors__description-wrapper">
-                            <p class="colors__description">Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились.
-                                Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p>
-                        </div>
-                    </li>
-                    <li class="colors__item">
-                        <div class="colors__name-wrapper colors__wrapper_red">
-                            <h3 class="colors__name">«Красный цитрус»</h3>
-                        </div>
-                        <div class="colors__description-wrapper">
-                            <p class="colors__description">Наушники Beats Solo3 могут работать до 40 часов без подзарядки, чтобы вы могли пользоваться ими каждый день. 5‑минутной зарядки Fast Fuel хватит ещё на 3 часа воспроизведения. Фирменное звучание Beats в наушниках с технологией Bluetooth класса 1 будет сопровождать вас повсюду — куда бы вы ни отправились.
-                                Расположение чашек с мягкими амбушюрами можно регулировать — вы сможете носить их целый день.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="section reviews">
-            <div class="container reviews__container">
-                <h2 class="reviews__main-header">Отзывы</h2>
-                <div class="reviews__content">
-                    <img class="reviews__photo-active" src="images/eilish.png" alt="eilish">
-                    <div class="reviews__text">
-                        <h3 class="reviews__header">Отличный звук</h3>
-                        <p class="reviews__description">Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно.</p>
-                        <p class="reviews__author">Билли Айлиш</p>
-                    </div>
-                </div>
-                <ul class="reviews__people">
-                    <li class="reviews__person reviews__person--active">
-                        <img class="reviews__photo" src="images/previews/eilish.png" alt="eilish">
-                    </li>
-                    <li class="reviews__person">
-                        <img class="reviews__photo" src="images/previews/grachev.png" alt="grachev">
-                    </li>
-                    <li class="reviews__person">
-                        <img class="reviews__photo" src="images/previews/orlova.png" alt="orlova">
-                    </li>
-                </ul>
-            </div>
-        </section>
         <section class="section work">
             <div class="container work__container">
                 <h2 class="work__title">Как мы работаем</h2>
@@ -407,7 +349,7 @@
                 <h2 class="ordering__title">Закажите доставку</h2>
                 <form class="ordering__form">
                     <div class="ordering__form-left">
-                        <div class="ordering__form-name-phone">
+                        <div class="ordering__form-row ordering__form-name-phone">
                             <label class="ordering__label">Имя
                                 <input class="ordering__field">
                             </label>
@@ -415,10 +357,12 @@
                                 <input class="ordering__field">
                             </label>
                         </div>
-                        <label class="ordering__label">Улица
-                            <input class="ordering__field ordering__field-street">
-                        </label>
-                        <div class="ordering__form-address">
+                        <div class="ordering__form-row ordering__form-street">
+                            <label class="ordering__label">Улица
+                                <input class="ordering__field ordering__field-street">
+                            </label>
+                        </div>
+                        <div class="ordering__form-row ordering__form-address">
                             <label class="ordering__label">Дом
                                 <input class="ordering__field">
                             </label>
@@ -434,23 +378,40 @@
                         </div>
                     </div>
                     <div class="ordering__form-right">
-                        <label class="ordering__label">
-                            Комментарий
-                            <textarea class="ordering__field ordering__field-comment"></textarea>
-                        </label>
-                        <div class="ordering__form-payment">
-                            <input id="change" type="radio" class="ordering__field-radio" value="change">
-                            <label class="ordering__label-radio" for="change">Потребуется сдача</label>
-                            <input id="card" type="radio" class="ordering__field-radio" value="card">
-                            <label class="ordering__label-radio" for="card">Оплата картой</label>
+                        <div class="ordering__form-row ordering__form-comment">
+                            <label class="ordering__label">
+                                Комментарий
+                                <textarea class="ordering__field ordering__field-comment"></textarea>
+                            </label>
                         </div>
-                        <div class="ordering__form-calling">
-                            <input id="no-calling" type="checkbox" class="ordering__field-checkbox">
-                            <label for="no-calling" class="ordering__label-checkbox">Не перезванивать</label>
+                        <div class="ordering__form-row ordering__form-payment">
+                            <label class="ordering__label ordering__label-radio">
+                                <div class="ordering__field-radio-wrapper">
+                                    <input class="ordering__field-radio" type="radio" name="payment" value="change" />
+                                    <div class="ordering__field-radio-mark"></div>
+                                </div>
+                                <span class="ordering__field-text">Потребуется сдача</span>
+                            </label>
+                            <label class="ordering__label ordering__label-radio">
+                                <div class="ordering__field-radio-wrapper">
+                                    <input class="ordering__field-radio" type="radio" name="payment" value="card" />
+                                    <div class="ordering__field-radio-mark"></div>
+                                </div>
+                                <span class="ordering__field-text">Оплата картой</span>
+                            </label>
                         </div>
-                        <div class="ordering__buttons">
-                            <button class="order__button">Заказать</button>
-                            <button class="cancel__button">Очистить</button>
+                        <div class="ordering__form-row ordering__form-calling">
+                            <label class="ordering__label ordering__label-checkbox">
+                                <div class="ordering__field-checkbox-wrapper">
+                                    <input class="ordering__field-checkbox" type="checkbox" />
+                                    <div class="ordering__field-mark"></div>
+                                </div>
+                                <span class="ordering__field-text">Не перезванивать</span>
+                            </label>
+                        </div>
+                        <div class="ordering__form-row ordering__buttons">
+                            <button class="order__button" type="submit">Заказать</button>
+                            <button class="cancel__button" type="reset">Очистить</button>
                         </div>
                     </div>
                 </form>
@@ -458,7 +419,7 @@
         </section>
         <section class="section contacts">
             <div class="container contacts__container">
-                <img class="contacts__map" src="images/map.png" alt="map">
+                <div class="contacts__map"></div>
                 <footer class="footer">
                     <div class="footer__content">
                         <div class="contacts__info">
