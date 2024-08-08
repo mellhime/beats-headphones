@@ -1,8 +1,8 @@
 .info {
-  background-color: $color-light-grey;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $color-light-grey;
 }
 
 .header {
@@ -38,19 +38,19 @@
   font-size: 18px;
 }
 
-.contact {
+.phone {
   display: flex;
   align-items: center;
   width: 160px;
   gap: 5px;
 }
 
-.contact__icon {
+.phone__icon {
   width: 14px;
   height: 14px;
 }
 
-.contact__phone {
+.phone__number {
   font-size: 18px;
   color: $color-black;
 }
@@ -62,17 +62,17 @@
 }
 
 .info__title {
+  max-width: 400px;
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
-  max-width: 400px;
 }
 
 .info__synopsis {
+  margin-top: 22px;
+  max-width: 332px;
   font-family: "AlegreyaSans", sans-serif;
   font-size: 21px;
-  max-width: 332px;
-  margin-top: 22px;
 }
 
 .order {
@@ -109,15 +109,11 @@
 }
 
 .info__icon {
+  margin-right: 11px;
   width: 52px;
   height: 52px;
-  margin-right: 11px;
 }
 
 .info__advantages {
   margin-top: 70px;
-}
-
-.info__text {
-
 }

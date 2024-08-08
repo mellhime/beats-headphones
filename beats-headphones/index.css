@@ -19,7 +19,6 @@ html {
 }
 
 .info {
-  background-color: #F5F5F5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,6 +28,7 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #F5F5F5;
 }
 
 .header {
@@ -76,7 +76,7 @@ html {
   font-size: 18px;
 }
 
-.contact {
+.phone {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,12 +87,12 @@ html {
   gap: 5px;
 }
 
-.contact__icon {
+.phone__icon {
   width: 14px;
   height: 14px;
 }
 
-.contact__phone {
+.phone__number {
   font-size: 18px;
   color: #292929;
 }
@@ -108,17 +108,17 @@ html {
 }
 
 .info__title {
+  max-width: 400px;
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
-  max-width: 400px;
 }
 
 .info__synopsis {
+  margin-top: 22px;
+  max-width: 332px;
   font-family: "AlegreyaSans", sans-serif;
   font-size: 21px;
-  max-width: 332px;
-  margin-top: 22px;
 }
 
 .order {
@@ -167,9 +167,9 @@ html {
 }
 
 .info__icon {
+  margin-right: 11px;
   width: 52px;
   height: 52px;
-  margin-right: 11px;
 }
 
 .info__advantages {
@@ -177,7 +177,6 @@ html {
 }
 
 .specification {
-  background-color: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,10 +186,10 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #FFFFFF;
 }
 
 .specification__heading {
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,20 +201,21 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 100px;
+  text-align: center;
 }
 
 .specification__title {
+  text-align: center;
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .specification__subtitle {
-  font-size: 16px;
-  text-align: center;
   margin-top: 18px;
   max-width: 600px;
+  text-align: center;
+  font-size: 16px;
   color: #666666;
 }
 
@@ -226,14 +226,13 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 62px;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
+  margin-top: 62px;
 }
 
 .specification__item {
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,16 +243,17 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .specification__item:not(:last-child)::after {
-  content: "";
-  background: url("/beats-headphones/images/icons/sprite.svg#combined-shape");
-  width: 67px;
-  height: 21px;
   position: absolute;
   margin-left: 23%;
   margin-top: 50px;
+  width: 67px;
+  height: 21px;
+  content: "";
+  background: url("/beats-headphones/images/icons/sprite.svg#combined-shape");
 }
 
 .specification__separator {
@@ -270,10 +270,6 @@ html {
 }
 
 .specification__background-icon {
-  background-color: #F5F5F5;
-  border-radius: 50%;
-  width: 128px;
-  height: 128px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -283,6 +279,10 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 128px;
+  height: 128px;
+  background-color: #F5F5F5;
+  border-radius: 50%;
 }
 
 .specification__icon {
@@ -291,26 +291,26 @@ html {
 }
 
 .specification__header {
+  margin-top: 24px;
   font-weight: 700;
   font-size: 24px;
-  margin-top: 24px;
 }
 
 .specification__text {
-  font-size: 16px;
-  max-width: 247px;
   margin-top: 7px;
+  max-width: 247px;
+  font-size: 16px;
   color: #666666;
 }
 
 .purchase {
-  background-color: #F5F5F5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #F5F5F5;
 }
 
 .purchase__container {
@@ -326,8 +326,8 @@ html {
 }
 
 .purchase__description {
-  width: 419px;
   margin-top: 66px;
+  width: 419px;
 }
 
 #gear > path {
@@ -341,6 +341,50 @@ html {
   border: none;
   border-radius: 4px;
   padding: 25px;
+  cursor: pointer;
+  position: relative;
+}
+
+.purchase__list {
+  position: absolute;
+  width: 273px;
+  height: 294px;
+  border-radius: 4px;
+  display: none;
+  left: 91px;
+  top: 0;
+  background-color: #F8FAF9;
+}
+
+.purchase__button:hover > .purchase__list {
+  display: inline;
+}
+
+.purchase__point {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 28px;
+  margin-right: 25px;
+  margin-left: 30px;
+}
+
+.purchase__point-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.purchase__point-icon {
+  margin-right: 18px;
+  width: 24px;
+  height: 24px;
 }
 
 .purchase__icon {
@@ -349,15 +393,15 @@ html {
 }
 
 .purchase__title {
+  margin-top: 25px;
   font-weight: 700;
   font-size: 36px;
   text-transform: uppercase;
-  margin-top: 25px;
 }
 
 .purchase__text {
-  color: #666666;
   margin-top: 24px;
+  color: #666666;
 }
 
 .purchase__options {
@@ -365,10 +409,10 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 60%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 60%;
 }
 
 .purchase__option-subtitle {
@@ -384,27 +428,27 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 24px;
-  gap: 13px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 24px;
+  gap: 13px;
 }
 
 .purchase__price {
+  text-align: center;
   font-size: 36px;
   color: #151515;
-  text-align: center;
 }
 
 .team {
-  background-color: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: #FFFFFF;
 }
 
 .team__container {
@@ -421,11 +465,11 @@ html {
 }
 
 .team__title {
+  margin-top: 73px;
+  text-align: center;
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
-  text-align: center;
-  margin-top: 73px;
 }
 
 .team__list {
@@ -445,34 +489,247 @@ html {
 
 .team__name {
   margin-top: 25px;
+  text-align: center;
   font-weight: 700;
   font-size: 18px;
-  text-align: center;
+  cursor: pointer;
 }
 
 .team__name::after {
-  content: "";
   position: absolute;
+  text-align: center;
+  margin-top: 7px;
+  margin-left: 3px;
   width: 0;
   height: 0;
+  content: "";
   border-style: solid;
   border-width: 0 4.5px 7.8px 4.5px;
   border-color: transparent transparent #E01F3D transparent;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  margin-top: 7px;
-  margin-left: 3px;
-  cursor: pointer;
+}
+
+.team__info {
+  display: none;
+}
+
+.team__employee--active > .team__info {
+  display: inline;
+}
+
+.team__employee--active > .team__name::after {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .team__profession {
-  text-align: center;
   margin-top: 11px;
+  text-align: center;
 }
 
 .team__description {
+  margin-top: 4px;
   text-align: center;
   color: #666666;
+}
+
+.colors {
+  background-image: url("/beats-headphones/images/girl.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.colors__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.colors__header {
+  margin-left: 84px;
+  margin-top: 115px;
+  font-weight: 700;
+  font-size: 48px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+.colors__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.colors__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #FFFFFF;
+}
+
+.colors__name-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 102px;
+}
+
+.colors__wrapper_silver {
+  background-color: #999999;
+}
+
+.colors__wrapper_black {
+  background-color: #292929;
+}
+
+.colors__wrapper_red {
+  background-color: #E01F3D;
+}
+
+.colors__name {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 36px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.colors__description-wrapper {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  background-color: #333537;
+  opacity: 90%;
+}
+
+.colors__description {
+  margin-top: 31px;
+  margin-left: 38px;
+  margin-right: 53px;
+  font-family: "AlegreyaSans", sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.colors__item--active > .colors__description-wrapper {
+  overflow: visible;
+  width: 542px;
+  height: 100%;
+}
+
+.reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FFFFFF;
+}
+
+.reviews__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews__main-header {
+  margin-top: 68px;
+  z-index: 1;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.reviews__content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 32px;
+  padding: 42px;
+  width: 100%;
+  background-color: #F8FAF9;
+}
+
+.reviews__content::after {
+  position: absolute;
+  left: calc(50% - 41px);
+  top: -61px;
+  height: 83px;
+  width: 83px;
+  content: "";
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.reviews__text {
+  margin-top: 32px;
+  margin-left: 40px;
+  max-width: 600px;
+}
+
+.reviews__header {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.reviews__description {
+  margin-top: 27px;
+  color: #666666;
+}
+
+.reviews__author {
+  margin-top: 38px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.reviews__people {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 15px;
+  gap: 6px;
+}
+
+.reviews__person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reviews__person--active {
+  border-radius: 104px;
+  outline: 4px solid #E01F3D;
+  outline-offset: -4px;
 }
 
 @font-face {

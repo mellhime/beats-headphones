@@ -1,7 +1,7 @@
 .team {
-  background-color: $color-white;
   display: flex;
   justify-content: center;
+  background-color: $color-white;
 }
 
 .team__container {
@@ -11,11 +11,11 @@
 }
 
 .team__title {
+  margin-top: 73px;
+  text-align: center;
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
-  text-align: center;
-  margin-top: 73px;
 }
 
 .team__list {
@@ -31,31 +31,45 @@
 
 .team__name {
   margin-top: 25px;
+  text-align: center;
   font-weight: 700;
   font-size: 18px;
-  text-align: center;
+  cursor: pointer;
 }
 
 .team__name::after {
-  content: "";
   position: absolute;
+  text-align: center;
+  margin-top: 7px;
+  margin-left: 3px;
   width: 0;
   height: 0;
+  content: "";
   border-style: solid;
   border-width: 0 4.5px 7.8px 4.5px;
   border-color: transparent transparent $color-red transparent;
   transform: rotate(180deg);
-  margin-top: 7px;
-  margin-left: 3px;
-  cursor: pointer;
+}
+
+.team__info {
+  display: none;
+}
+
+.team__employee--active > .team__info {
+  display: inline;
+}
+
+.team__employee--active > .team__name::after {
+  transform: rotate(0deg);
 }
 
 .team__profession {
-  text-align: center;
   margin-top: 11px;
+  text-align: center;
 }
 
 .team__description {
+  margin-top: 4px;
   text-align: center;
   color: $color-grey;
 }
