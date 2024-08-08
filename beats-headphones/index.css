@@ -514,11 +514,11 @@ html {
   display: none;
 }
 
-li:has(.team__name--active) .team__info {
+.team__employee--active > .team__info {
   display: inline;
 }
 
-li:has(.team__name--active) .team__name::after {
+.team__employee--active > .team__name::after {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
@@ -622,7 +622,7 @@ li:has(.team__name--active) .team__name::after {
   line-height: 24px;
 }
 
-.colors__description-wrapper--active {
+.colors__item--active > .colors__description-wrapper {
   overflow: visible;
   width: 542px;
   height: 100%;

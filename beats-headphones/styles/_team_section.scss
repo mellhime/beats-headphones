@@ -55,11 +55,11 @@
   display: none;
 }
 
-li:has(.team__name--active) .team__info {
+.team__employee--active > .team__info {
   display: inline;
 }
 
-li:has(.team__name--active) .team__name::after {
+.team__employee--active > .team__name::after {
   transform: rotate(0deg);
 }
 
