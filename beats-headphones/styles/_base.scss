@@ -28,3 +28,9 @@ html {
   width: 940px;
   height: 100%;
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}

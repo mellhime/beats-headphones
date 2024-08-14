@@ -18,6 +18,11 @@ html {
   height: 100%;
 }
 
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
 .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,6 +34,10 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #F5F5F5;
+}
+
+.info__content {
+  margin-top: 47px;
 }
 
 .header {
@@ -43,15 +52,22 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .logo__icon {
   width: 40px;
   height: 40px;
   fill: #E01F3D;
+}
+
+.navigation {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .navigation__list {
@@ -64,13 +80,31 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 650px;
+  width: 80%;
 }
 
 .navigation__link {
   font-family: "AlegreyaSans", sans-serif;
   color: #292929;
   font-size: 18px;
+}
+
+.navigation-button {
+  display: none;
+}
+
+.navigation-button-close {
+  display: none;
+}
+
+.navigation-button__icon {
+  width: 27px;
+  height: 24px;
+}
+
+.navigation-button-close__icon {
+  width: 24px;
+  height: 24px;
 }
 
 .phone {
@@ -80,7 +114,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 160px;
+  min-width: 160px;
   gap: 5px;
 }
 
@@ -105,7 +139,7 @@ html {
 }
 
 .info__title {
-  max-width: 400px;
+  max-width: 80%;
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
@@ -113,16 +147,13 @@ html {
 
 .info__synopsis {
   margin-top: 22px;
-  max-width: 332px;
+  max-width: 80%;
   font-family: "AlegreyaSans", sans-serif;
   font-size: 21px;
 }
 
-.order {
-  margin-top: 36px;
-}
-
 .order__button {
+  margin-top: 36px;
   background-color: #E01F3D;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -132,21 +163,16 @@ html {
   font-weight: 700;
 }
 
-.info__image {
-  margin-left: -15px;
-}
-
 .info__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
   margin-top: 70px;
+  width: 120%;
 }
 
 .info__item {
@@ -159,20 +185,92 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 195px;
-  height: 56px;
+  width: 33%;
 }
 
 .info__icon {
-  margin-right: 11px;
   width: 52px;
   height: 52px;
 }
 
-.info__advantages {
-  margin-top: 70px;
+.info__text {
+  margin-left: 11px;
 }
 
+@media (max-width: 768px) {
+  .info__headphones {
+    max-width: 323px;
+    max-height: 323px;
+  }
+  .info__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .info__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .info__list, .phone {
+    display: none;
+  }
+  .navigation {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #333537;
+  }
+  .navigation__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .navigation__link {
+    color: #FFFFFF;
+    font-family: "Play", sans-serif;
+    font-size: 36px;
+    line-height: 72px;
+  }
+  .navigation-button {
+    display: inline;
+  }
+  .navigation-button:hover + .navigation {
+    display: inline;
+  }
+  .navigation-button:hover + .navigation-button {
+    display: none;
+  }
+  .navigation-button:hover + .navigation-button-close {
+    display: inline;
+  }
+}
 .specification {
   display: -webkit-box;
   display: -ms-flexbox;
