@@ -5,10 +5,6 @@
   background-color: $color-light-grey;
 }
 
-.info__content {
-  margin-top: 47px;
-}
-
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -35,31 +31,52 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   width: 80%;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.navigation__list--collapsed {
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: $color-black-background;
 }
 
 .navigation__link {
   font-family: "AlegreyaSans", sans-serif;
   color: $color-black;
   font-size: 18px;
+
+  @include tablets {
+    color: $color-white;
+    font-family: "Play", sans-serif;
+    font-size: 36px;
+    line-height: 72px;
+  }
 }
 
 .navigation-button {
   display: none;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    height: 24px;
+  }
 }
 
 .navigation-button-close {
   display: none;
-}
-
-.navigation-button__icon {
-  width: 27px;
-  height: 24px;
-}
-
-.navigation-button-close__icon {
-  width: 24px;
-  height: 24px;
 }
 
 .phone {
@@ -67,6 +84,10 @@
   align-items: center;
   min-width: 160px;
   gap: 5px;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .phone__icon {
@@ -83,6 +104,26 @@
   display: flex;
   align-items: center;
   margin-top: 47px;
+  position: relative;
+
+  @include tablets {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+.info__content {
+  margin-top: 47px;
+  z-index: 1;
+  width: 50%;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+  }
 }
 
 .info__title {
@@ -90,6 +131,10 @@
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
+
+  @include phones {
+    font-size: 32px;
+  }
 }
 
 .info__synopsis {
@@ -97,17 +142,10 @@
   max-width: 80%;
   font-family: "AlegreyaSans", sans-serif;
   font-size: 21px;
-}
 
-.order__button {
-  margin-top: 36px;
-  background-color: $color-red;
-  color: $color-white;
-  text-transform: uppercase;
-  border: none;
-  padding: 21px 41px 21px 41px;
-  border-radius: 100px;
-  font-weight: 700;
+  @include phones {
+    font-size: 18px;
+  }
 }
 
 .info__list {
@@ -115,7 +153,10 @@
   justify-content: space-between;
   gap: 10px;
   margin-top: 70px;
-  width: 120%;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .info__item {
@@ -134,66 +175,59 @@
   margin-left: 11px;
 }
 
-@media (max-width: 768px) {
-  .info__headphones {
+.info__headphones {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+
+  @include tablets {
     max-width: 323px;
     max-height: 323px;
+    position: static;
   }
+}
 
-  .info__description {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-  }
+.order {
+  margin-top: 36px;
+  background-color: $color-red;
+  color: $color-white;
+  text-transform: uppercase;
+  border: none;
+  padding: 21px 41px 21px 41px;
+  border-radius: 100px;
+  font-weight: 700;
+}
 
-  .info__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+.black-line {
+  width: 22px;
+  height: 0;
+  border: 2px solid $color-black;
+  border-radius: 25%;
+}
 
-  .info__list, .phone {
-    display: none;
-  }
+.grey-cross {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  .navigation {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background-color: $color-black-background;
-  }
+.grey-cross::before,
+.grey-cross::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: $color-light-grey;
+  border-radius: 15%;
+}
 
-  .navigation__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.grey-cross::before {
+  transform: rotate(45deg);
+}
 
-  .navigation__link {
-    color: $color-white;
-    font-family: "Play", sans-serif;
-    font-size: 36px;
-    line-height: 72px;
-  }
-
-  .navigation-button {
-    display: inline;
-  }
-
-  .navigation-button:hover + .navigation {
-    display: inline;
-  }
-
-  .navigation-button:hover + .navigation-button {
-    display: none;
-  }
-
-  .navigation-button:hover + .navigation-button-close {
-    display: inline;
-  }
+.grey-cross::after {
+  transform: rotate(-45deg);
 }
