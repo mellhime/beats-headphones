@@ -51,9 +51,6 @@ html {
 .logo__icon {
   width: 40px;
   height: 40px;
-}
-
-#logo > path {
   fill: #E01F3D;
 }
 
@@ -260,10 +257,6 @@ html {
   margin-top: 50px;
 }
 
-#combined-shape > path {
-  fill: #F5F5F5;
-}
-
 .specification__separator-icon {
   width: 67px;
   height: 21px;
@@ -330,10 +323,6 @@ html {
   width: 419px;
 }
 
-#gear > path {
-  fill: #FFFFFF;
-}
-
 .purchase__button {
   width: 91px;
   height: 91px;
@@ -390,6 +379,7 @@ html {
 .purchase__icon {
   width: 42px;
   height: 42px;
+  fill: #FFFFFF;
 }
 
 .purchase__title {
