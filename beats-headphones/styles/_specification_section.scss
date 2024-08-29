@@ -10,7 +10,6 @@
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
-  text-align: center;
 }
 
 .specification__title {
@@ -18,21 +17,36 @@
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
+
+  @include phones {
+    font-size: 32px;
+  }
 }
 
 .specification__subtitle {
   margin-top: 18px;
-  max-width: 600px;
+  max-width: 70%;
   text-align: center;
-  font-size: 16px;
   color: $color-grey;
+
+  @include tablets {
+    max-width: 90%;
+  }
 }
 
 .specification__list {
   display: flex;
   justify-content: space-between;
-  align-items: start;
   margin-top: 62px;
+
+  @include tablets {
+    gap: 10px;
+  }
+
+  @include phones {
+   flex-direction: column;
+    gap: 43px;
+  }
 }
 
 .specification__item {
@@ -40,6 +54,11 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  @include phones {
+    flex-direction: row;
+    text-align: start;
+  }
 }
 
 .specification__item:not(:last-child)::after {
@@ -50,6 +69,10 @@
   height: 21px;
   content: "";
   background: url('/beats-headphones/images/icons/sprite.svg#combined-shape');
+
+  @include tablets {
+    content: none;
+  }
 }
 
 .specification__separator {
@@ -65,7 +88,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 128px;
+  min-width: 128px;
   height: 128px;
   background-color: $color-light-grey;
   border-radius: 50%;
@@ -76,15 +99,35 @@
   height: 68px;
 }
 
+.specification__content {
+  max-width: 276px;
+
+  @include phones {
+    margin-left: 12px;
+    max-width: 100%;
+  }
+}
+
 .specification__header {
   margin-top: 24px;
   font-weight: 700;
   font-size: 24px;
+
+  @include phones {
+    margin-top: 0;
+  }
 }
 
 .specification__text {
   margin-top: 7px;
-  max-width: 247px;
   font-size: 16px;
   color: $color-grey;
+
+  @include tablets {
+    margin-top: 18px;
+  }
+
+  @include phones {
+    margin-top: 6px;
+  }
 }

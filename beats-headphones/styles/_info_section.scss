@@ -79,27 +79,6 @@
   display: none;
 }
 
-.phone {
-  display: flex;
-  align-items: center;
-  min-width: 160px;
-  gap: 5px;
-
-  @include tablets {
-    display: none;
-  }
-}
-
-.phone__icon {
-  width: 14px;
-  height: 14px;
-}
-
-.phone__number {
-  font-size: 18px;
-  color: $color-black;
-}
-
 .info__description {
   display: flex;
   align-items: center;
@@ -187,15 +166,8 @@
   }
 }
 
-.order {
+.info__order {
   margin-top: 36px;
-  background-color: $color-red;
-  color: $color-white;
-  text-transform: uppercase;
-  border: none;
-  padding: 21px 41px 21px 41px;
-  border-radius: 100px;
-  font-weight: 700;
 }
 
 .black-line {
