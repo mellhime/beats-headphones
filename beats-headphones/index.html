@@ -338,6 +338,125 @@
                 </ul>
             </div>
         </section>
+        <section class="section work">
+            <div class="container work__container">
+                <h2 class="work__title">Как мы работаем</h2>
+                <img class="work__video-player" src="images/video-player.png" alt="video-player">
+            </div>
+        </section>
+        <section class="section ordering">
+            <div class="container ordering__container">
+                <h2 class="ordering__title">Закажите доставку</h2>
+                <form class="ordering__form">
+                    <div class="ordering__form-left">
+                        <div class="ordering__form-row ordering__form-name-phone">
+                            <label class="ordering__label">Имя
+                                <input class="ordering__field">
+                            </label>
+                            <label class="ordering__label">Телефон
+                                <input class="ordering__field">
+                            </label>
+                        </div>
+                        <div class="ordering__form-row ordering__form-street">
+                            <label class="ordering__label">Улица
+                                <input class="ordering__field ordering__field-street">
+                            </label>
+                        </div>
+                        <div class="ordering__form-row ordering__form-address">
+                            <label class="ordering__label">Дом
+                                <input class="ordering__field">
+                            </label>
+                            <label class="ordering__label">Корпус
+                                <input class="ordering__field">
+                            </label>
+                            <label class="ordering__label">Квартира
+                                <input class="ordering__field">
+                            </label>
+                            <label class="ordering__label">Этаж
+                                <input class="ordering__field">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="ordering__form-right">
+                        <div class="ordering__form-row ordering__form-comment">
+                            <label class="ordering__label">
+                                Комментарий
+                                <textarea class="ordering__field ordering__field-comment"></textarea>
+                            </label>
+                        </div>
+                        <div class="ordering__form-row ordering__form-payment">
+                            <label class="ordering__label ordering__label-radio">
+                                <div class="ordering__field-radio-wrapper">
+                                    <input class="ordering__field-radio" type="radio" name="payment" value="change" />
+                                    <div class="ordering__field-radio-mark"></div>
+                                </div>
+                                <span class="ordering__field-text">Потребуется сдача</span>
+                            </label>
+                            <label class="ordering__label ordering__label-radio">
+                                <div class="ordering__field-radio-wrapper">
+                                    <input class="ordering__field-radio" type="radio" name="payment" value="card" />
+                                    <div class="ordering__field-radio-mark"></div>
+                                </div>
+                                <span class="ordering__field-text">Оплата картой</span>
+                            </label>
+                        </div>
+                        <div class="ordering__form-row ordering__form-calling">
+                            <label class="ordering__label ordering__label-checkbox">
+                                <div class="ordering__field-checkbox-wrapper">
+                                    <input class="ordering__field-checkbox" type="checkbox" />
+                                    <div class="ordering__field-mark"></div>
+                                </div>
+                                <span class="ordering__field-text">Не перезванивать</span>
+                            </label>
+                        </div>
+                        <div class="ordering__form-row ordering__buttons">
+                            <button class="order__button" type="submit">Заказать</button>
+                            <button class="cancel__button" type="reset">Очистить</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="section contacts">
+            <div class="container contacts__container">
+                <div class="contacts__map"></div>
+                <footer class="footer">
+                    <div class="footer__content">
+                        <div class="contacts__info">
+                            <p class="contacts__address">Москва, ул.Новый Арбат, д.31/12</p>
+                            <div class="contacts__phone phone">
+                                <svg class="phone__icon">
+                                    <use href="./images/icons/sprite.svg#phone"></use>
+                                </svg>
+                                <a class="phone__number" href="tel:88009039090">8 800 903 90 90</a>
+                            </div>
+                        </div>
+                        <ul class="contacts__social-media">
+                            <li class="contacts__social-media-item">
+                                <svg class="contacts__icon">
+                                    <use href="./images/icons/sprite.svg#vk"></use>
+                                </svg>
+                            </li>
+                            <li class="contacts__social-media-item">
+                                <svg class="contacts__icon">
+                                    <use href="./images/icons/sprite.svg#facebook"></use>
+                                </svg>
+                            </li>
+                            <li class="contacts__social-media-item">
+                                <svg class="contacts__icon">
+                                    <use href="./images/icons/sprite.svg#instagram"></use>
+                                </svg>
+                            </li>
+                            <li class="contacts__social-media-item">
+                                <svg class="contacts__icon">
+                                    <use href="./images/icons/sprite.svg#telegram"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+        </section>
     </main>
 </div>
 </body>

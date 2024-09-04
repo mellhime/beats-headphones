@@ -1,0 +1,53 @@
+.contacts {
+  display: flex;
+  background-color: $color-white;
+}
+
+.contacts__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+}
+
+.contacts__map {
+  background-image: url('/beats-headphones/images/map.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts__info {
+  margin-left: 86px;
+}
+
+.phone {
+  margin-top: 5px;
+}
+
+.contacts__social-media {
+  display: flex;
+  margin-right: 54px;
+  gap: 10px;
+}
+
+.contacts__icon {
+  width: 26px;
+  height: 26px;
+}
+
+#vk, #facebook, #instagram, #telegram > path {
+  fill: $color-icons-grey;
+}

@@ -15,10 +15,6 @@
   width: 419px;
 }
 
-#gear > path {
-  fill: $color-white;
-}
-
 .purchase__button {
   width: 91px;
   height: 91px;
@@ -67,6 +63,7 @@
 .purchase__icon {
   width: 42px;
   height: 42px;
+  fill: $color-white;
 }
 
 .purchase__title {
