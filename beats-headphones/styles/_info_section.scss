@@ -16,101 +16,209 @@
   align-items: center;
 }
 
+.logo {
+  height: 40px;
+}
+
 .logo__icon {
   width: 40px;
   height: 40px;
   fill: $color-red;
 }
 
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .navigation__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 650px;
+  flex-wrap: wrap;
+  width: 80%;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+// add this class to the ul with class "navigation__list" to show the small black navigation
+.navigation__list--collapsed {
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: $color-black-background;
+  }
 }
 
 .navigation__link {
   font-family: "AlegreyaSans", sans-serif;
   color: $color-black;
   font-size: 18px;
+
+  @include tablets {
+    color: $color-white;
+    font-family: "Play", sans-serif;
+    font-size: 36px;
+    line-height: 72px;
+  }
 }
 
-.phone {
-  display: flex;
-  align-items: center;
-  width: 160px;
-  gap: 5px;
-}
+.navigation-button {
+  display: none;
 
-.phone__icon {
-  width: 14px;
-  height: 14px;
-}
-
-.phone__number {
-  font-size: 18px;
-  color: $color-black;
+  @include tablets {
+    display: inline;
+  }
 }
 
 .info__description {
   display: flex;
   align-items: center;
   margin-top: 47px;
+  position: relative;
+
+  @include tablets {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+.info__content {
+  margin-top: 47px;
+  z-index: 1;
+  width: 50%;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+  }
 }
 
 .info__title {
-  max-width: 400px;
+  max-width: 80%;
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
+
+  @include phones {
+    font-size: 32px;
+  }
 }
 
 .info__synopsis {
   margin-top: 22px;
-  max-width: 332px;
+  max-width: 80%;
   font-family: "AlegreyaSans", sans-serif;
   font-size: 21px;
-}
 
-.order {
-  margin-top: 36px;
-}
-
-.order__button {
-  background-color: $color-red;
-  color: $color-white;
-  text-transform: uppercase;
-  border: none;
-  padding: 21px 41px 21px 41px;
-  border-radius: 100px;
-  font-weight: 700;
-}
-
-.info__image {
-  margin-left: -15px;
+  @include phones {
+    font-size: 18px;
+  }
 }
 
 .info__list {
   display: flex;
-  justify-content: left;
-  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   margin-top: 70px;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .info__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 195px;
-  height: 56px;
+  width: 33%;
 }
 
 .info__icon {
-  margin-right: 11px;
   width: 52px;
   height: 52px;
 }
 
-.info__advantages {
-  margin-top: 70px;
+.info__text {
+  margin-left: 11px;
+}
+
+.info__headphones {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+
+  @include tablets {
+    max-width: 323px;
+    max-height: 323px;
+    position: static;
+  }
+}
+
+.info__order {
+  margin-top: 36px;
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 24px;
+}
+
+.black-line {
+  width: 22px;
+  height: 0;
+  border: 2px solid $color-black;
+  border-radius: 25%;
+}
+
+.grey-cross {
+  display: none;
+}
+
+.grey-cross::before,
+.grey-cross::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: $color-light-grey;
+  border-radius: 15%;
+}
+
+.grey-cross::before {
+  transform: rotate(45deg);
+}
+
+.grey-cross::after {
+  transform: rotate(-45deg);
+}
+
+// add this class to button with class "navigation-button" to show the cross icon
+.navigation-button--active > .grey-cross {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+}
+
+.navigation-button--active > .burger {
+  display: none;
 }

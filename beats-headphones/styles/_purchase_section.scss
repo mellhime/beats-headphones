@@ -7,12 +7,38 @@
 .purchase__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
+  position: relative;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.purchase__headphones {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+
+  @include tablets {
+    max-width: 306px;
+    max-height: 306px;
+    position: static;
+  }
 }
 
 .purchase__description {
-  margin-top: 66px;
-  width: 419px;
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  z-index: 1;
+
+  @include tablets {
+    margin-top: 49px;
+    max-width: 100%;
+    align-items: center;
+  }
 }
 
 .purchase__button {
@@ -24,6 +50,10 @@
   padding: 25px;
   cursor: pointer;
   position: relative;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .purchase__list {
@@ -71,18 +101,34 @@
   font-weight: 700;
   font-size: 36px;
   text-transform: uppercase;
+
+  @include tablets {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 0;
+  }
 }
 
 .purchase__text {
   margin-top: 24px;
   color: $color-grey;
+
+  @include tablets {
+    margin-top: 14px;
+    text-align: center;
+  }
 }
 
 .purchase__options {
   margin-top: 24px;
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  max-width: 60%;
+
+  @include tablets {
+    justify-content: center;
+    gap: 44px;
+  }
 }
 
 .purchase__option-subtitle {
@@ -99,10 +145,21 @@
   align-items: center;
   margin-top: 24px;
   gap: 13px;
+
+  @include tablets {
+    gap: 44px;
+  }
+
+  @include phones {
+    gap: 13px;
+  }
 }
 
 .purchase__price {
-  text-align: center;
   font-size: 36px;
   color: $color-middle-black;
+
+  @include phones {
+    font-size: 32px;
+  }
 }

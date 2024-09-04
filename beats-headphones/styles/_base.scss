@@ -25,6 +25,11 @@ html {
 }
 
 .container {
-  width: 940px;
+  width: 90%;
+  max-width: 940px;
   height: 100%;
+
+  @include tablets {
+    width: 90%;
+  }
 }
