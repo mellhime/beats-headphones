@@ -2,12 +2,14 @@
   background-image: url('/beats-headphones/images/girl.png');
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: end;
 }
 
 .colors__container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  max-width: 100%;
 }
 
 .colors__header {

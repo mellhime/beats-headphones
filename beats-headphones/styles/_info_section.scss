@@ -13,6 +13,11 @@
 .header__content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
 }
 
 .logo__icon {
@@ -39,16 +44,20 @@
   }
 }
 
+// add this class to the ul with class "navigation__list" to show the small black navigation
 .navigation__list--collapsed {
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  background-color: $color-black-background;
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: $color-black-background;
+  }
 }
 
 .navigation__link {
@@ -68,15 +77,8 @@
   display: none;
 
   @include tablets {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    height: 24px;
+    display: inline;
   }
-}
-
-.navigation-button-close {
-  display: none;
 }
 
 .info__description {
@@ -170,6 +172,13 @@
   margin-top: 36px;
 }
 
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 24px;
+}
+
 .black-line {
   width: 22px;
   height: 0;
@@ -178,12 +187,7 @@
 }
 
 .grey-cross {
-  position: relative;
-  height: 20px;
-  width: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: none;
 }
 
 .grey-cross::before,
@@ -202,4 +206,19 @@
 
 .grey-cross::after {
   transform: rotate(-45deg);
+}
+
+// add this class to button with class "navigation-button" to show the cross icon
+.navigation-button--active > .grey-cross {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+}
+
+.navigation-button--active > .burger {
+  display: none;
 }

@@ -7,7 +7,7 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  width: 100%;
+  max-width: 100%;
 }
 
 .contacts__map {
@@ -46,8 +46,5 @@
 .contacts__icon {
   width: 26px;
   height: 26px;
-}
-
-#vk, #facebook, #instagram, #telegram > path {
   fill: $color-icons-grey;
 }
