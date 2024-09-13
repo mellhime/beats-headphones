@@ -2,14 +2,29 @@
   background-image: url('/beats-headphones/images/girl.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 75%;
   display: flex;
   justify-content: end;
+
+  @include tablets {
+    background-position: 95%;
+  }
+
+  @include phones {
+    background-position: 75%;
+  }
 }
 
 .colors__container {
   display: flex;
   justify-content: space-between;
   max-width: 100%;
+  width: 100%;
+
+  @include phones {
+    justify-content: end;
+    position: relative;
+  }
 }
 
 .colors__header {
@@ -19,6 +34,17 @@
   font-size: 48px;
   color: $color-white;
   text-transform: uppercase;
+
+  @include tablets {
+    margin-left: 40px;
+    margin-top: 91px;
+  }
+
+  @include phones {
+    margin-left: 10px;
+    margin-top: 76px;
+    font-size: 32px;
+  }
 }
 
 .colors__list {
@@ -34,6 +60,10 @@
   display: flex;
   justify-content: center;
   width: 102px;
+
+  @include phones {
+    width: 90px;
+  }
 }
 
 .colors__wrapper_silver {
@@ -75,6 +105,28 @@
 
 .colors__item--active > .colors__description-wrapper {
   overflow: visible;
-  width: 542px;
+  max-width: 524px;
+  width: 90%;
   height: 100%;
+}
+
+body:has(.colors__item--active) .colors__header {
+  @include tablets {
+    display: none;
+  }
+}
+
+.colors__item--active {
+    @include phones {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      z-index: 1;
+    }
+}
+
+.colors__item:not(.colors__item--active) {
+  @include phones {
+    filter: blur(3px);
+  }
 }

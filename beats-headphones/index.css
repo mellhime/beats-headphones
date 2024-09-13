@@ -64,13 +64,24 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #F5F5F5;
+}
+
+.info__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 60%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .header {
@@ -375,6 +386,19 @@ html {
   background-color: #FFFFFF;
 }
 
+.specification__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .specification__heading {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -386,7 +410,6 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 100px;
 }
 
 .specification__title {
@@ -790,6 +813,11 @@ html {
   font-size: 48px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 480px) {
+  .team__title {
+    font-size: 32px;
+  }
+}
 
 .team__list {
   display: -webkit-box;
@@ -799,11 +827,82 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 53px;
-  width: 100%;
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .team__list {
+    margin-top: 33px;
+    gap: 16px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__list {
+    gap: 6px;
+  }
 }
 
 .team__employee {
   max-width: 220px;
+}
+@media screen and (max-width: 768px) {
+  .team__employee {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__employee {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .team__photo {
+    display: none;
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .team__photo {
+    max-height: 180px;
+    max-width: 138px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .team__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .team__employee--active > .team__main > .team__photo {
+    display: inline;
+  }
 }
 
 .team__name {
@@ -813,11 +912,17 @@ html {
   font-size: 18px;
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  .team__name {
+    margin-top: 0;
+    font-size: 21px;
+  }
+}
 
 .team__name::after {
   position: absolute;
   text-align: center;
-  margin-top: 7px;
+  margin-top: 8px;
   margin-left: 3px;
   width: 0;
   height: 0;
@@ -828,6 +933,12 @@ html {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
+@media screen and (max-width: 768px) {
+  .team__name::after {
+    margin-top: 10px;
+    border-color: transparent transparent #365A49 transparent;
+  }
+}
 
 .team__info {
   display: none;
@@ -837,7 +948,7 @@ html {
   display: inline;
 }
 
-.team__employee--active > .team__name::after {
+.team__employee--active > .team__main > .team__name::after {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
 }
@@ -845,6 +956,12 @@ html {
 .team__profession {
   margin-top: 11px;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .team__profession {
+    font-size: 18px;
+    font-weight: 700;
+  }
 }
 
 .team__description {
@@ -857,12 +974,23 @@ html {
   background-image: url("/beats-headphones/images/girl.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+}
+@media screen and (max-width: 768px) {
+  .colors {
+    background-position: 95%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .colors {
+    background-position: 75%;
+  }
 }
 
 .colors__container {
@@ -873,6 +1001,15 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .colors__container {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    position: relative;
+  }
 }
 
 .colors__header {
@@ -882,6 +1019,19 @@ html {
   font-size: 48px;
   color: #FFFFFF;
   text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .colors__header {
+    margin-left: 40px;
+    margin-top: 91px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .colors__header {
+    margin-left: 10px;
+    margin-top: 76px;
+    font-size: 32px;
+  }
 }
 
 .colors__list {
@@ -905,6 +1055,11 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   width: 102px;
+}
+@media screen and (max-width: 480px) {
+  .colors__name-wrapper {
+    width: 90px;
+  }
 }
 
 .colors__wrapper_silver {
@@ -949,8 +1104,31 @@ html {
 
 .colors__item--active > .colors__description-wrapper {
   overflow: visible;
-  width: 542px;
+  max-width: 524px;
+  width: 90%;
   height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  body:has(.colors__item--active) .colors__header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .colors__item--active {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .colors__item:not(.colors__item--active) {
+    -webkit-filter: blur(3px);
+            filter: blur(3px);
+  }
 }
 
 .reviews {
@@ -974,14 +1152,21 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .reviews__main-header {
-  margin-top: 68px;
   z-index: 1;
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
+}
+@media screen and (max-width: 480px) {
+  .reviews__main-header {
+    font-size: 32px;
+  }
 }
 
 .reviews__content {
@@ -994,6 +1179,31 @@ html {
   width: 100%;
   background-color: #F8FAF9;
 }
+@media screen and (max-width: 768px) {
+  .reviews__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__content {
+    margin-top: 26px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reviews__photo-active {
+    margin-top: 20px;
+    width: 130px;
+    height: 130px;
+  }
+}
 
 .reviews__content::after {
   position: absolute;
@@ -1005,27 +1215,75 @@ html {
   background-color: #FFFFFF;
   border-radius: 50%;
 }
+@media screen and (max-width: 768px) {
+  .reviews__content::after {
+    top: -48px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__content::after {
+    content: none;
+  }
+}
 
 .reviews__text {
   margin-top: 32px;
   margin-left: 40px;
   max-width: 600px;
 }
+@media screen and (max-width: 768px) {
+  .reviews__text {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__text {
+    margin-top: 20px;
+  }
+}
 
 .reviews__header {
   font-weight: 700;
   font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+  .reviews__header {
+    text-align: center;
+  }
 }
 
 .reviews__description {
   margin-top: 27px;
   color: #666666;
 }
+@media screen and (max-width: 768px) {
+  .reviews__description {
+    margin-top: 16px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__description {
+    margin-top: 12px;
+  }
+}
 
 .reviews__author {
   margin-top: 38px;
   font-weight: 700;
   font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .reviews__author {
+    margin-top: 16px;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__author {
+    margin-top: 12px;
+  }
 }
 
 .reviews__people {
@@ -1037,6 +1295,16 @@ html {
           justify-content: space-between;
   margin-top: 15px;
   gap: 6px;
+}
+@media screen and (max-width: 768px) {
+  .reviews__people {
+    margin-top: 32px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reviews__people {
+    margin-top: 54px;
+  }
 }
 
 .reviews__person {
@@ -1055,6 +1323,13 @@ html {
   border-radius: 104px;
   outline: 4px solid #E01F3D;
   outline-offset: -4px;
+}
+
+@media screen and (max-width: 480px) {
+  .reviews__photo {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .work {
@@ -1078,18 +1353,37 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .work__title {
-  margin-top: 58px;
   text-align: center;
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 480px) {
+  .work__title {
+    font-size: 32px;
+  }
+}
 
 .work__video-player {
   margin-top: 44px;
+  max-width: 662px;
+}
+@media screen and (max-width: 768px) {
+  .work__video-player {
+    margin-top: 40px;
+    max-width: 594px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .work__video-player {
+    max-width: 394px;
+  }
 }
 
 .ordering {
@@ -1249,7 +1543,7 @@ html {
   margin-top: 44px;
 }
 
-.cancel__button {
+.cancel-button {
   color: #FFFFFF;
   margin-left: 15px;
 }

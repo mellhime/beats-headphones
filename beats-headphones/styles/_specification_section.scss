@@ -5,11 +5,16 @@
   background-color: $color-white;
 }
 
+.specification__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .specification__heading {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
 }
 
 .specification__title {
