@@ -24,22 +24,6 @@ html {
   }
 }
 
-.phone {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-width: 160px;
-  gap: 5px;
-}
-@media screen and (max-width: 768px) {
-  .phone {
-    display: none;
-  }
-}
-
 .phone__icon {
   width: 14px;
   height: 14px;
@@ -371,6 +355,22 @@ html {
 
 .navigation-button--active > .burger {
   display: none;
+}
+
+.header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 160px;
+  gap: 5px;
+}
+@media screen and (max-width: 768px) {
+  .header__contacts {
+    display: none;
+  }
 }
 
 .specification {
@@ -1419,6 +1419,11 @@ html {
   text-transform: uppercase;
   color: #FFFFFF;
 }
+@media screen and (max-width: 480px) {
+  .ordering__title {
+    font-size: 32px;
+  }
+}
 
 .ordering__form {
   display: -webkit-box;
@@ -1430,6 +1435,22 @@ html {
   gap: 26px;
   margin-top: 61px;
 }
+@media screen and (max-width: 768px) {
+  .ordering__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 32px;
+  }
+}
 
 .ordering__label {
   color: #FFFFFF;
@@ -1437,6 +1458,16 @@ html {
 
 .ordering__form-left {
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .ordering__form-left {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ordering__form-left {
+    width: 95%;
+  }
 }
 
 .ordering__form-row {
@@ -1486,6 +1517,16 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media screen and (max-width: 768px) {
+  .ordering__form-right {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ordering__form-right {
+    width: 95%;
+  }
+}
 
 .ordering__form-payment {
   display: -webkit-box;
@@ -1497,6 +1538,18 @@ html {
   gap: 24px;
   margin-top: 36px;
 }
+@media screen and (max-width: 768px) {
+  .ordering__form-payment {
+    margin-top: 22px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ordering__form-payment {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .ordering__form-calling {
   display: -webkit-box;
@@ -1507,6 +1560,19 @@ html {
           align-items: center;
   gap: 10px;
   margin-top: 16px;
+}
+@media screen and (max-width: 768px) {
+  .ordering__form-calling {
+    height: 36px;
+    margin-top: 22px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ordering__form-calling {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .ordering__label-radio, .ordering__label-checkbox {
@@ -1522,6 +1588,20 @@ html {
   margin-top: 10px;
   height: 58px;
   border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .ordering__field {
+    height: 36px;
+    margin-top: 3px;
+  }
+}
+
+.ordering__field:focus {
+  outline: none;
+  border: 2px solid #E01F3D;
 }
 
 .ordering__field-comment, .ordering__field-street {
@@ -1532,6 +1612,11 @@ html {
   height: 155px;
   resize: none;
 }
+@media screen and (max-width: 768px) {
+  .ordering__field-comment {
+    height: 82px;
+  }
+}
 
 .ordering__buttons {
   display: -webkit-box;
@@ -1541,6 +1626,14 @@ html {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 44px;
+}
+@media screen and (max-width: 768px) {
+  .ordering__buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 36px;
+  }
 }
 
 .cancel-button {
@@ -1636,19 +1729,29 @@ html {
       -ms-flex-pack: end;
           justify-content: end;
   max-width: 100%;
+  width: 100%;
 }
 
 .contacts__map {
   background-image: url("/beats-headphones/images/map.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
 }
 
 .footer {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 54px 20px 86px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 20px 90px 31px 90px;
+  }
 }
 
 .footer__content {
@@ -1662,27 +1765,97 @@ html {
       -ms-flex-align: center;
           align-items: center;
 }
-
-.contacts__info {
-  margin-left: 86px;
+@media screen and (max-width: 480px) {
+  .footer__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
-.phone {
+@media screen and (max-width: 480px) {
+  .contacts__info {
+    text-align: center;
+  }
+}
+
+.contacts__address {
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .contacts__address {
+    font-size: 21px;
+  }
+}
+
+.contacts__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 160px;
+  gap: 5px;
   margin-top: 5px;
+}
+@media screen and (max-width: 480px) {
+  .contacts__phone {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .phone__number {
+    color: #E01F3D;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .phone__icon {
+    fill: #E01F3D;
+  }
 }
 
 .contacts__social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 54px;
   gap: 10px;
+}
+@media screen and (max-width: 480px) {
+  .contacts__social-media {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+    gap: 14px;
+  }
 }
 
 .contacts__icon {
   width: 26px;
   height: 26px;
   fill: #B3B3B3;
+}
+@media screen and (max-width: 768px) {
+  .contacts__icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .contacts__icon {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 @font-face {

@@ -228,3 +228,14 @@
 .navigation-button--active > .burger {
   display: none;
 }
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+  min-width: 160px;
+  gap: 5px;
+
+  @include tablets {
+    display: none;
+  }
+}
