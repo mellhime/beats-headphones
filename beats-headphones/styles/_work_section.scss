@@ -8,16 +8,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .work__title {
-  margin-top: 58px;
   text-align: center;
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
+
+  @include phones {
+    font-size: 32px;
+  }
 }
 
 .work__video-player {
   margin-top: 44px;
+  max-width: 662px;
+
+  @include tablets {
+    margin-top: 40px;
+    max-width: 594px;
+  }
+
+  @include phones {
+    max-width: 394px;
+  }
 }
