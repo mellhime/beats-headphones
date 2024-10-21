@@ -93,14 +93,9 @@
 }
 
 .contacts__icon {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   fill: $color-icons-grey;
-
-  @include tablets {
-    width: 30px;
-    height: 30px;
-  }
 
   @include phones {
     width: 24px;
