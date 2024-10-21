@@ -1001,7 +1001,10 @@ html {
 }
 
 .team__info {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 .team__employee--active > .team__info {
@@ -1018,6 +1021,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  visibility: visible;
+  opacity: 1;
 }
 
 .team__employee--active > .team__main > .team__name::after {

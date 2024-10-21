@@ -115,7 +115,9 @@
 }
 
 .team__info {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 .team__employee--active > .team__info {
@@ -123,6 +125,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  visibility: visible;
+  opacity: 1;
 }
 
 .team__employee--active > .team__main > .team__name::after {
