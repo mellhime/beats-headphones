@@ -1167,8 +1167,11 @@ html {
 
 .colors__description-wrapper {
   width: 0;
-  height: 0;
+  height: 100%;
   overflow: hidden;
+  -webkit-transition: width 300ms linear;
+  transition: width 300ms linear;
+  max-width: 524px;
   background-color: #333537;
   opacity: 90%;
 }
@@ -1184,9 +1187,7 @@ html {
 
 .colors__item--active > .colors__description-wrapper {
   overflow: visible;
-  max-width: 524px;
   width: 90%;
-  height: 100%;
 }
 
 @media screen and (max-width: 768px) {
