@@ -29,7 +29,7 @@
 
 .colors__header {
   margin-left: 84px;
-  margin-top: 115px;
+  margin-top: 113px;
   font-weight: 700;
   font-size: 48px;
   color: $color-white;
@@ -80,8 +80,10 @@
 
 .colors__name {
   margin-bottom: 40px;
+  font-family: "AlegreyaSans", sans-serif;
   font-weight: 700;
   font-size: 36px;
+  line-height: 43px;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }

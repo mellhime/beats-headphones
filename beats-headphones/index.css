@@ -20,7 +20,7 @@ html {
 }
 @media screen and (max-width: 768px) {
   .container {
-    width: 90%;
+    width: 95%;
   }
 }
 
@@ -67,6 +67,14 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .info__container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    height: 100%;
+  }
+}
 
 .header {
   padding-top: 24px;
@@ -109,15 +117,13 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 80%;
+  width: 90%;
+  gap: 27px;
 }
 @media screen and (max-width: 768px) {
   .navigation__list {
@@ -177,7 +183,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 47px;
+  margin-top: 23px;
   position: relative;
 }
 @media screen and (max-width: 768px) {
@@ -189,6 +195,7 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 110px;
   }
 }
 
@@ -211,6 +218,7 @@ html {
             align-items: center;
     text-align: center;
     width: 90%;
+    margin-top: 64px;
   }
 }
 
@@ -219,18 +227,31 @@ html {
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
+  line-height: 52px;
+}
+@media screen and (max-width: 768px) {
+  .info__title {
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 480px) {
   .info__title {
     font-size: 32px;
+    line-height: 36px;
   }
 }
 
 .info__synopsis {
   margin-top: 22px;
-  max-width: 80%;
+  max-width: 70%;
   font-family: "AlegreyaSans", sans-serif;
   font-size: 21px;
+}
+@media screen and (max-width: 768px) {
+  .info__synopsis {
+    margin-top: 5px;
+    max-width: 60%;
+  }
 }
 @media screen and (max-width: 480px) {
   .info__synopsis {
@@ -245,8 +266,8 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 10px;
-  margin-top: 70px;
+  gap: 20px;
+  margin-top: 64px;
 }
 @media screen and (max-width: 768px) {
   .info__list {
@@ -264,7 +285,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 33%;
+  min-width: 33%;
 }
 
 .info__icon {
@@ -279,18 +300,26 @@ html {
 .info__headphones {
   position: absolute;
   z-index: 0;
-  right: 0;
+  right: 15px;
+  max-width: 489px;
+  max-height: 489px;
 }
 @media screen and (max-width: 768px) {
   .info__headphones {
+    position: static;
+    right: 0;
     max-width: 323px;
     max-height: 323px;
-    position: static;
   }
 }
 
 .info__order {
-  margin-top: 36px;
+  margin-top: 29px;
+}
+@media screen and (max-width: 768px) {
+  .info__order {
+    margin-top: 24px;
+  }
 }
 
 .burger {
@@ -364,7 +393,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-width: 160px;
+  min-width: 178px;
   gap: 5px;
 }
 @media screen and (max-width: 768px) {
@@ -397,6 +426,9 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .specification__heading {
@@ -418,6 +450,11 @@ html {
   font-size: 48px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 768px) {
+  .specification__title {
+    margin-top: 7px;
+  }
+}
 @media screen and (max-width: 480px) {
   .specification__title {
     font-size: 32px;
@@ -425,14 +462,14 @@ html {
 }
 
 .specification__subtitle {
-  margin-top: 18px;
-  max-width: 70%;
+  margin-top: 15px;
+  max-width: 60%;
   text-align: center;
   color: #666666;
 }
 @media screen and (max-width: 768px) {
   .specification__subtitle {
-    max-width: 90%;
+    max-width: 70%;
   }
 }
 
@@ -444,10 +481,12 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 62px;
+  gap: 73px;
 }
 @media screen and (max-width: 768px) {
   .specification__list {
-    gap: 10px;
+    margin-top: 52px;
+    gap: 3px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -472,6 +511,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  max-width: 258px;
 }
 @media screen and (max-width: 480px) {
   .specification__item {
@@ -529,7 +569,16 @@ html {
 }
 
 .specification__content {
-  max-width: 276px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (max-width: 480px) {
   .specification__content {
@@ -551,6 +600,7 @@ html {
 
 .specification__text {
   margin-top: 7px;
+  max-width: 90%;
   font-size: 16px;
   color: #666666;
 }
@@ -602,13 +652,16 @@ html {
 .purchase__headphones {
   position: absolute;
   z-index: 0;
-  left: 0;
+  left: 27px;
+  margin-top: 90px;
 }
 @media screen and (max-width: 768px) {
   .purchase__headphones {
+    position: static;
+    left: 0;
+    margin-top: 0;
     max-width: 306px;
     max-height: 306px;
-    position: static;
   }
 }
 
@@ -620,12 +673,13 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 420px;
+  margin-top: 65px;
+  max-width: 401px;
   z-index: 1;
 }
 @media screen and (max-width: 768px) {
   .purchase__description {
-    margin-top: 49px;
+    margin-top: 28px;
     max-width: 100%;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -702,6 +756,7 @@ html {
   font-weight: 700;
   font-size: 36px;
   text-transform: uppercase;
+  line-height: 42px;
 }
 @media screen and (max-width: 768px) {
   .purchase__title {
@@ -713,17 +768,18 @@ html {
 
 .purchase__text {
   margin-top: 24px;
+  max-width: 90%;
   color: #666666;
 }
 @media screen and (max-width: 768px) {
   .purchase__text {
-    margin-top: 14px;
+    margin-top: 0;
     text-align: center;
   }
 }
 
 .purchase__options {
-  margin-top: 24px;
+  margin-top: 28px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,7 +793,8 @@ html {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 44px;
+    gap: 80px;
+    margin-top: 31px;
   }
 }
 
@@ -746,6 +803,7 @@ html {
 }
 
 .purchase__option-text {
+  margin-top: 2px;
   font-weight: 700;
   font-size: 18px;
 }
@@ -757,8 +815,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 24px;
-  gap: 13px;
+  margin-top: 26px;
+  gap: 20px;
 }
 @media screen and (max-width: 768px) {
   .purchase__buying {
@@ -849,7 +907,7 @@ html {
 }
 
 .team__employee {
-  max-width: 220px;
+  max-width: 25%;
 }
 @media screen and (max-width: 768px) {
   .team__employee {
@@ -863,6 +921,7 @@ html {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    max-width: 50%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -906,8 +965,9 @@ html {
 }
 
 .team__name {
-  margin-top: 25px;
+  margin-top: 20px;
   text-align: center;
+  font-family: "AlegreyaSans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   cursor: pointer;
@@ -945,7 +1005,19 @@ html {
 }
 
 .team__employee--active > .team__info {
-  display: inline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .team__employee--active > .team__main > .team__name::after {
@@ -965,6 +1037,7 @@ html {
 }
 
 .team__description {
+  max-width: 65%;
   margin-top: 4px;
   text-align: center;
   color: #666666;
@@ -1014,7 +1087,7 @@ html {
 
 .colors__header {
   margin-left: 84px;
-  margin-top: 115px;
+  margin-top: 113px;
   font-weight: 700;
   font-size: 48px;
   color: #FFFFFF;
@@ -1076,8 +1149,10 @@ html {
 
 .colors__name {
   margin-bottom: 40px;
+  font-family: "AlegreyaSans", sans-serif;
   font-weight: 700;
   font-size: 36px;
+  line-height: 43px;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -1189,6 +1264,7 @@ html {
         -ms-flex-align: center;
             align-items: center;
     width: 90%;
+    margin-top: 6px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1197,9 +1273,12 @@ html {
   }
 }
 
+.reviews__photo-active {
+  margin-left: 40px;
+}
 @media screen and (max-width: 768px) {
   .reviews__photo-active {
-    margin-top: 20px;
+    margin-left: 0;
     width: 130px;
     height: 130px;
   }
@@ -1227,13 +1306,14 @@ html {
 }
 
 .reviews__text {
-  margin-top: 32px;
+  margin-top: 30px;
   margin-left: 40px;
-  max-width: 600px;
+  max-width: 460px;
 }
 @media screen and (max-width: 768px) {
   .reviews__text {
     margin-left: 0;
+    max-width: 100%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1269,7 +1349,7 @@ html {
 }
 
 .reviews__author {
-  margin-top: 38px;
+  margin-top: 40px;
   font-weight: 700;
   font-size: 18px;
 }
@@ -1293,7 +1373,7 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 15px;
+  margin-top: 11px;
   gap: 6px;
 }
 @media screen and (max-width: 768px) {
@@ -1433,7 +1513,7 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 26px;
-  margin-top: 61px;
+  margin-top: 25px;
 }
 @media screen and (max-width: 768px) {
   .ordering__form {
@@ -1481,7 +1561,7 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 16px;
+  gap: 25px;
 }
 
 .ordering__form-name-phone > label {
@@ -1496,7 +1576,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 13px;
+  gap: 25px;
 }
 
 .ordering__form-address > label {
@@ -1516,10 +1596,12 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-left: 15px;
 }
 @media screen and (max-width: 768px) {
   .ordering__form-right {
     width: 70%;
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 480px) {
@@ -1535,8 +1617,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 24px;
-  margin-top: 36px;
+  gap: 20px;
+  margin-top: 30px;
 }
 @media screen and (max-width: 768px) {
   .ordering__form-payment {
@@ -1559,7 +1641,7 @@ html {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  margin-top: 16px;
+  margin-top: 25px;
 }
 @media screen and (max-width: 768px) {
   .ordering__form-calling {
@@ -1586,7 +1668,7 @@ html {
 
 .ordering__field {
   margin-top: 10px;
-  height: 58px;
+  height: 55px;
   border-radius: 4px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1609,7 +1691,7 @@ html {
 }
 
 .ordering__field-comment {
-  height: 155px;
+  height: 148px;
   resize: none;
 }
 @media screen and (max-width: 768px) {
@@ -1625,7 +1707,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 44px;
+  margin-top: 48px;
 }
 @media screen and (max-width: 768px) {
   .ordering__buttons {
@@ -1841,15 +1923,9 @@ html {
 }
 
 .contacts__icon {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   fill: #B3B3B3;
-}
-@media screen and (max-width: 768px) {
-  .contacts__icon {
-    width: 30px;
-    height: 30px;
-  }
 }
 @media screen and (max-width: 480px) {
   .contacts__icon {

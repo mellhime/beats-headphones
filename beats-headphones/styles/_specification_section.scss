@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .specification__heading {
@@ -23,19 +24,23 @@
   font-size: 48px;
   text-transform: uppercase;
 
+  @include tablets {
+    margin-top: 7px;
+  }
+
   @include phones {
     font-size: 32px;
   }
 }
 
 .specification__subtitle {
-  margin-top: 18px;
-  max-width: 70%;
+  margin-top: 15px;
+  max-width: 60%;
   text-align: center;
   color: $color-grey;
 
   @include tablets {
-    max-width: 90%;
+    max-width: 70%;
   }
 }
 
@@ -43,9 +48,11 @@
   display: flex;
   justify-content: space-between;
   margin-top: 62px;
+  gap: 73px;
 
   @include tablets {
-    gap: 10px;
+    margin-top: 52px;
+    gap: 3px;
   }
 
   @include phones {
@@ -59,6 +66,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  max-width: 258px;
 
   @include phones {
     flex-direction: row;
@@ -105,7 +113,9 @@
 }
 
 .specification__content {
-  max-width: 276px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @include phones {
     margin-left: 12px;
@@ -125,6 +135,7 @@
 
 .specification__text {
   margin-top: 7px;
+  max-width: 90%;
   font-size: 16px;
   color: $color-grey;
 
