@@ -90,8 +90,10 @@
 
 .colors__description-wrapper {
   width: 0;
-  height: 0;
+  height: 100%;
   overflow: hidden;
+  transition: width 300ms linear;
+  max-width: 524px;
   background-color: $color-black-background;
   opacity: 90%;
 }
@@ -107,9 +109,7 @@
 
 .colors__item--active > .colors__description-wrapper {
   overflow: visible;
-  max-width: 524px;
   width: 90%;
-  height: 100%;
 }
 
 body:has(.colors__item--active) .colors__header {
