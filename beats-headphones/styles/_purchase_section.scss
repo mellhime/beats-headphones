@@ -9,6 +9,8 @@
   align-items: center;
   justify-content: end;
   position: relative;
+  max-width: 100%;
+  width: 100%;
 
   @include tablets {
     flex-direction: column;
@@ -16,11 +18,64 @@
   }
 }
 
+.purchase__slider {
+  display: flex;
+  justify-content: center;
+}
+
+.purchase__track {
+  max-width: 940px;
+}
+
+.purchase__slide {
+  position: relative;
+  display: flex;
+  justify-content: end;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.purchase__arrow {
+  position: absolute;
+  top: 46%;
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  border: solid $color-black;
+  border-width: 0 3px 3px 0;
+
+  @include tablets {
+    top: 26%;
+  }
+}
+
+.purchase__arrow--left {
+  left: 5%;
+  transform: rotate(135deg);
+
+  @include tablets {
+    left: 20%;
+  }
+}
+
+.purchase__arrow--right {
+  right: 10%;
+  transform: rotate(-45deg);
+
+  @include tablets {
+    right: 20%;
+  }
+}
+
 .purchase__headphones {
   position: absolute;
   z-index: 0;
   left: 27px;
-  margin-top: 90px;
+  margin-top: 6px;
 
   @include tablets {
     position: static;
@@ -34,8 +89,8 @@
 .purchase__description {
   display: flex;
   flex-direction: column;
-  margin-top: 65px;
-  max-width: 401px;
+  // margin-top: -30px; здесь не могу задать так отступ, контент обрезается
+  max-width: 407px;
   z-index: 1;
 
   @include tablets {
@@ -101,7 +156,7 @@
 }
 
 .purchase__title {
-  margin-top: 25px;
+  margin-top: 22px;
   font-weight: 700;
   font-size: 36px;
   text-transform: uppercase;
@@ -126,7 +181,7 @@
 }
 
 .purchase__options {
-  margin-top: 28px;
+  margin-top: 25px;
   display: flex;
   justify-content: space-between;
   max-width: 60%;
@@ -151,7 +206,7 @@
 .purchase__buying {
   display: flex;
   align-items: center;
-  margin-top: 26px;
+  margin-top: 23px;
   gap: 20px;
 
   @include tablets {

@@ -25,3 +25,9 @@ const colorsList = document.getElementsByClassName('colors__item');
         }
     });
 });
+
+const glide = new Glide('.glide', {
+    perView: 1
+})
+
+glide.mount()

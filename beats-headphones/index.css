@@ -1,4 +1,5 @@
 @import "styles/normalize.css";
+@import "styles/glide.core.css";
 html {
   font-family: "Play", sans-serif;
   font-size: 16px;
@@ -42,6 +43,51 @@ html {
   padding: 21px 41px 21px 41px;
   border-radius: 100px;
   font-weight: 700;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  background-color: #292929;
+  opacity: 60%;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+}
+
+.dot--active {
+  width: 7px;
+  height: 7px;
+  background-color: #E01F3D;
+  border-radius: 50%;
+  position: relative;
+}
+
+.dot--active::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #E01F3D;
+  border-radius: 50%;
+}
+
+.scroll-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  gap: 14px;
+  right: 49px;
+  top: 38%;
 }
 
 .info {
@@ -636,6 +682,8 @@ html {
       -ms-flex-pack: end;
           justify-content: end;
   position: relative;
+  max-width: 100%;
+  width: 100%;
 }
 @media screen and (max-width: 768px) {
   .purchase__container {
@@ -649,11 +697,85 @@ html {
   }
 }
 
+.purchase__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.purchase__track {
+  max-width: 940px;
+}
+
+.purchase__slide {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+@media screen and (max-width: 768px) {
+  .purchase__slide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.purchase__arrow {
+  position: absolute;
+  top: 46%;
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  border: solid #292929;
+  border-width: 0 3px 3px 0;
+}
+@media screen and (max-width: 768px) {
+  .purchase__arrow {
+    top: 26%;
+  }
+}
+
+.purchase__arrow--left {
+  left: 5%;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+@media screen and (max-width: 768px) {
+  .purchase__arrow--left {
+    left: 20%;
+  }
+}
+
+.purchase__arrow--right {
+  right: 10%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+@media screen and (max-width: 768px) {
+  .purchase__arrow--right {
+    right: 20%;
+  }
+}
+
 .purchase__headphones {
   position: absolute;
   z-index: 0;
   left: 27px;
-  margin-top: 90px;
+  margin-top: 6px;
 }
 @media screen and (max-width: 768px) {
   .purchase__headphones {
@@ -673,8 +795,7 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 65px;
-  max-width: 401px;
+  max-width: 407px;
   z-index: 1;
 }
 @media screen and (max-width: 768px) {
@@ -752,7 +873,7 @@ html {
 }
 
 .purchase__title {
-  margin-top: 25px;
+  margin-top: 22px;
   font-weight: 700;
   font-size: 36px;
   text-transform: uppercase;
@@ -779,7 +900,7 @@ html {
 }
 
 .purchase__options {
-  margin-top: 28px;
+  margin-top: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -815,7 +936,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 26px;
+  margin-top: 23px;
   gap: 20px;
 }
 @media screen and (max-width: 768px) {
@@ -967,7 +1088,6 @@ html {
 .team__name {
   margin-top: 20px;
   text-align: center;
-  font-family: "AlegreyaSans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   cursor: pointer;
@@ -1169,8 +1289,6 @@ html {
   width: 0;
   height: 100%;
   overflow: hidden;
-  -webkit-transition: width 300ms linear;
-  transition: width 300ms linear;
   max-width: 524px;
   background-color: #333537;
   opacity: 90%;
