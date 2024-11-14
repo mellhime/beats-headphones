@@ -60,6 +60,10 @@
   @include tablets {
     left: 20%;
   }
+
+  @include phones {
+    left: 5%;
+  }
 }
 
 .purchase__arrow--right {
@@ -68,6 +72,10 @@
 
   @include tablets {
     right: 20%;
+  }
+
+  @include phones {
+    right: 5%;
   }
 }
 
@@ -97,6 +105,10 @@
     margin-top: 28px;
     max-width: 100%;
     align-items: center;
+  }
+
+  @include phones {
+    //max-width: 90%;
   }
 }
 
@@ -167,6 +179,11 @@
     font-size: 28px;
     margin-top: 0;
   }
+
+  @include phones {
+    max-width: 90%;
+    line-height: 32px;
+  }
 }
 
 .purchase__text {
@@ -177,6 +194,11 @@
   @include tablets {
     margin-top: 0;
     text-align: center;
+  }
+
+  @include phones {
+    margin-top: 13px;
+    max-width: 90%;
   }
 }
 

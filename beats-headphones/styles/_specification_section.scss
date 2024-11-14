@@ -42,6 +42,10 @@
   @include tablets {
     max-width: 70%;
   }
+
+  @include phones {
+    max-width: 90%;
+  }
 }
 
 .specification__list {
@@ -67,6 +71,10 @@
   align-items: center;
   text-align: center;
   max-width: 258px;
+
+  @include tablets {
+    max-width: 100%;
+  }
 
   @include phones {
     flex-direction: row;
@@ -120,6 +128,7 @@
   @include phones {
     margin-left: 12px;
     max-width: 100%;
+    align-items: start;
   }
 }
 
@@ -145,5 +154,6 @@
 
   @include phones {
     margin-top: 6px;
+    max-width: 95%;
   }
 }

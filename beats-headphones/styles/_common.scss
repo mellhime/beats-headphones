@@ -54,4 +54,8 @@
   gap: 14px;
   right: 49px;
   top: 38%;
+
+  @include tablets {
+    right: 10px;
+  }
 }
