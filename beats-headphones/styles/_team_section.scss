@@ -132,7 +132,6 @@
 .team__employee--active > .team__info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100%;
   visibility: visible;
@@ -154,7 +153,6 @@
 }
 
 .team__description {
-  max-width: 65%;
   margin-top: 4px;
   text-align: center;
   color: $color-grey;
