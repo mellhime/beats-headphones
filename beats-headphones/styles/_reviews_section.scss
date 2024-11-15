@@ -71,8 +71,6 @@
 }
 
 .reviews__photo-big {
-  //margin-left: 40px;
-
   @include tablets {
     margin-left: 0;
     width: 130px;

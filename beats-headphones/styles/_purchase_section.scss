@@ -97,7 +97,7 @@
 .purchase__description {
   display: flex;
   flex-direction: column;
-  // margin-top: -30px; здесь не могу задать так отступ, контент обрезается
+  // margin-top: -30px;
   max-width: 407px;
   z-index: 1;
 
@@ -105,10 +105,6 @@
     margin-top: 28px;
     max-width: 100%;
     align-items: center;
-  }
-
-  @include phones {
-    //max-width: 90%;
   }
 }
 
