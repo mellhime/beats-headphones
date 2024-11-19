@@ -18,16 +18,41 @@
   font-weight: 700;
 }
 
-.dot {
+.scroll-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  gap: 14px;
+  right: 2%;
+  top: 38%;
+
+  @include tablets {
+    right: 10px;
+  }
+}
+
+.scroll-list--light > .scroll-list__dot {
+  background-color: $color-white;
+}
+
+.scroll-list--light > .scroll-list__dot--active {
+  background-color: $color-white;
+}
+
+.scroll-list--light > .scroll-list__dot--active::before {
+  border: 1px solid $color-white;
+}
+
+.scroll-list__dot {
   height: 7px;
   width: 7px;
   background-color: $color-black;
   opacity: 60%;
   border-radius: 50%;
-  mix-blend-mode: difference;
 }
 
-.dot--active {
+.scroll-list__dot--active {
   width: 7px;
   height: 7px;
   background-color: $color-red;
@@ -35,7 +60,7 @@
   position: relative;
 }
 
-.dot--active::before {
+.scroll-list__dot--active::before {
   content: '';
   position: absolute;
   top: -4px;
@@ -44,18 +69,4 @@
   height: 13px;
   border: 1px solid $color-red;
   border-radius: 50%;
-}
-
-.scroll-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: fixed;
-  gap: 14px;
-  right: 49px;
-  top: 38%;
-
-  @include tablets {
-    right: 10px;
-  }
 }
