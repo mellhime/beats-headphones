@@ -28,14 +28,15 @@
 }
 
 .purchase__slide {
-  position: relative;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
+  gap: 59px;
 
   @include tablets {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0;
   }
 }
 
@@ -80,14 +81,9 @@
 }
 
 .purchase__headphones {
-  position: absolute;
-  z-index: 0;
-  left: 27px;
-  margin-top: 6px;
+  margin-top: 30px;
 
   @include tablets {
-    position: static;
-    left: 0;
     margin-top: 0;
     max-width: 306px;
     max-height: 306px;
@@ -97,9 +93,7 @@
 .purchase__description {
   display: flex;
   flex-direction: column;
-  // margin-top: -30px;
-  max-width: 407px;
-  z-index: 1;
+  max-width: 50%;
 
   @include tablets {
     margin-top: 28px;
