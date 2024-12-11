@@ -47,7 +47,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 50%;
+    max-width: 75%;
   }
 
   @include phones {
@@ -57,7 +57,10 @@
 
 .team__photo {
   @include tablets {
-    display: none;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
     margin-top: 15px;
   }
 
@@ -77,14 +80,15 @@
 
 .team__employee--active > .team__main > .team__photo {
   @include tablets {
-    display: inline;
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
 .team__name {
   margin-top: 20px;
   text-align: center;
-  font-family: "AlegreyaSans", sans-serif;
   font-weight: 700;
   font-size: 18px;
   cursor: pointer;
@@ -112,10 +116,15 @@
     margin-top: 10px;
     border-color: transparent transparent $color-dark-green transparent;
   }
+
+  @include phones {
+    border-color: transparent transparent $color-red transparent;
+  }
 }
 
 .team__info {
   visibility: hidden;
+  height: 0;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
 }
@@ -123,8 +132,8 @@
 .team__employee--active > .team__info {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  height: 100%;
   visibility: visible;
   opacity: 1;
 }
@@ -144,8 +153,16 @@
 }
 
 .team__description {
-  max-width: 65%;
   margin-top: 4px;
   text-align: center;
   color: $color-grey;
+
+  @include tablets {
+    max-width: 60%;
+  }
+
+  @include phones {
+    margin-top: 13px;
+    max-width: 80%;
+  }
 }

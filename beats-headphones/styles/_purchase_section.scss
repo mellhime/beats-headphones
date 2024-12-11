@@ -9,6 +9,8 @@
   align-items: center;
   justify-content: end;
   position: relative;
+  max-width: 100%;
+  width: 100%;
 
   @include tablets {
     flex-direction: column;
@@ -16,15 +18,72 @@
   }
 }
 
-.purchase__headphones {
-  position: absolute;
-  z-index: 0;
-  left: 27px;
-  margin-top: 90px;
+.purchase__slider {
+  display: flex;
+  justify-content: center;
+}
+
+.purchase__track {
+  max-width: 940px;
+}
+
+.purchase__slide {
+  display: flex;
+  justify-content: space-between;
+  gap: 59px;
 
   @include tablets {
-    position: static;
-    left: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.purchase__arrow {
+  position: absolute;
+  top: 46%;
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  border: solid $color-black;
+  border-width: 0 3px 3px 0;
+
+  @include tablets {
+    top: 26%;
+  }
+}
+
+.purchase__arrow--left {
+  left: 5%;
+  transform: rotate(135deg);
+
+  @include tablets {
+    left: 20%;
+  }
+
+  @include phones {
+    left: 5%;
+  }
+}
+
+.purchase__arrow--right {
+  right: 10%;
+  transform: rotate(-45deg);
+
+  @include tablets {
+    right: 20%;
+  }
+
+  @include phones {
+    right: 5%;
+  }
+}
+
+.purchase__headphones {
+  margin-top: 30px;
+
+  @include tablets {
     margin-top: 0;
     max-width: 306px;
     max-height: 306px;
@@ -34,9 +93,7 @@
 .purchase__description {
   display: flex;
   flex-direction: column;
-  margin-top: 65px;
-  max-width: 401px;
-  z-index: 1;
+  max-width: 50%;
 
   @include tablets {
     margin-top: 28px;
@@ -101,7 +158,7 @@
 }
 
 .purchase__title {
-  margin-top: 25px;
+  margin-top: 22px;
   font-weight: 700;
   font-size: 36px;
   text-transform: uppercase;
@@ -111,6 +168,11 @@
     text-align: center;
     font-size: 28px;
     margin-top: 0;
+  }
+
+  @include phones {
+    max-width: 90%;
+    line-height: 32px;
   }
 }
 
@@ -123,10 +185,15 @@
     margin-top: 0;
     text-align: center;
   }
+
+  @include phones {
+    margin-top: 13px;
+    max-width: 90%;
+  }
 }
 
 .purchase__options {
-  margin-top: 28px;
+  margin-top: 25px;
   display: flex;
   justify-content: space-between;
   max-width: 60%;
@@ -151,7 +218,7 @@
 .purchase__buying {
   display: flex;
   align-items: center;
-  margin-top: 26px;
+  margin-top: 23px;
   gap: 20px;
 
   @include tablets {
