@@ -1,0 +1,162 @@
+@use "mixins.scss" as *;
+@use "variables.scss" as *;
+
+.specification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-white;
+}
+
+.specification__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.specification__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.specification__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+
+  @include tablets {
+    margin-top: 7px;
+  }
+
+  @include phones {
+    font-size: 32px;
+  }
+}
+
+.specification__subtitle {
+  margin-top: 15px;
+  max-width: 60%;
+  text-align: center;
+  color: $color-grey;
+
+  @include tablets {
+    max-width: 70%;
+  }
+
+  @include phones {
+    max-width: 90%;
+  }
+}
+
+.specification__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 62px;
+  gap: 73px;
+
+  @include tablets {
+    margin-top: 52px;
+    gap: 3px;
+  }
+
+  @include phones {
+   flex-direction: column;
+    gap: 43px;
+  }
+}
+
+.specification__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 258px;
+
+  @include tablets {
+    max-width: 100%;
+  }
+
+  @include phones {
+    flex-direction: row;
+    text-align: start;
+  }
+}
+
+.specification__item:not(:last-child)::after {
+  position: absolute;
+  margin-left: 23%;
+  margin-top: 50px;
+  width: 67px;
+  height: 21px;
+  content: "";
+  background: url('../images/icons/sprite.svg#combined-shape');
+
+  @include tablets {
+    content: none;
+  }
+}
+
+.specification__separator {
+  margin-top: 50px;
+}
+
+.specification__separator-icon {
+  width: 67px;
+  height: 21px;
+}
+
+.specification__background-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 128px;
+  height: 128px;
+  background-color: $color-light-grey;
+  border-radius: 50%;
+}
+
+.specification__icon {
+  width: 68px;
+  height: 68px;
+}
+
+.specification__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include phones {
+    margin-left: 12px;
+    max-width: 100%;
+    align-items: start;
+  }
+}
+
+.specification__header {
+  margin-top: 24px;
+  font-weight: 700;
+  font-size: 24px;
+
+  @include phones {
+    margin-top: 0;
+  }
+}
+
+.specification__text {
+  margin-top: 7px;
+  max-width: 90%;
+  font-size: 16px;
+  color: $color-grey;
+
+  @include tablets {
+    margin-top: 18px;
+  }
+
+  @include phones {
+    margin-top: 6px;
+    max-width: 95%;
+  }
+}

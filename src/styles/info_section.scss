@@ -1,0 +1,272 @@
+@use "mixins.scss" as *;
+@use "variables.scss" as *;
+
+.info {
+  display: flex;
+  justify-content: center;
+  background-color: $color-light-grey;
+}
+
+.info__container {
+  display: flex;
+  flex-direction: column;
+
+  @include tablets {
+    justify-content: start;
+    height: 100%;
+  }
+}
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+.logo__icon {
+  width: 40px;
+  height: 40px;
+  fill: $color-red;
+}
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  gap: 13px;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.navigation__list--collapsed {
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: $color-black-background;
+  }
+}
+
+.navigation__link {
+  font-family: "AlegreyaSans", sans-serif;
+  color: $color-black;
+  font-size: 18px;
+
+  @include tablets {
+    color: $color-white;
+    font-family: "Play", sans-serif;
+    font-size: 36px;
+    line-height: 72px;
+  }
+}
+
+.navigation-button {
+  display: none;
+
+  @include tablets {
+    display: inline;
+  }
+}
+
+.info__description {
+  display: flex;
+  align-items: center;
+  margin-top: 23px;
+  position: relative;
+
+  @include tablets {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  @include phones {
+    margin-top: 17px;
+  }
+}
+
+.info__content {
+  margin-top: 47px;
+  z-index: 1;
+  width: 50%;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin-top: 64px;
+  }
+
+  @include phones {
+    margin-top: 49px;
+  }
+}
+
+.info__title {
+  max-width: 80%;
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 52px;
+
+  @include tablets {
+    max-width: 100%;
+  }
+
+  @include phones {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.info__synopsis {
+  margin-top: 22px;
+  max-width: 70%;
+  font-family: "AlegreyaSans", sans-serif;
+  font-size: 21px;
+
+  @include tablets {
+    margin-top: 5px;
+    max-width: 60%;
+  }
+
+  @include phones {
+    font-size: 18px;
+  }
+}
+
+.info__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 64px;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.info__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 33%;
+}
+
+.info__icon {
+  width: 52px;
+  height: 52px;
+}
+
+.info__text {
+  margin-left: 11px;
+}
+
+.info__headphones {
+  position: absolute;
+  z-index: 0;
+  right: 15px;
+  max-width: 489px;
+  max-height: 489px;
+
+  @include tablets {
+    position: static;
+    right: 0;
+    max-width: 323px;
+    max-height: 323px;
+  }
+}
+
+.info__order {
+  margin-top: 29px;
+
+  @include tablets {
+    margin-top: 24px;
+  }
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: 24px;
+}
+
+.black-line {
+  width: 20px;
+  height: 0;
+  border: 2.2px solid $color-black;
+  border-radius: 20%;
+}
+
+.grey-cross {
+  display: none;
+}
+
+.grey-cross::before,
+.grey-cross::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: $color-light-grey;
+  border-radius: 15%;
+}
+
+.grey-cross::before {
+  transform: rotate(45deg);
+}
+
+.grey-cross::after {
+  transform: rotate(-45deg);
+}
+
+.navigation-button--active > .grey-cross {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+}
+
+.navigation-button--active > .burger {
+  display: none;
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+  min-width: 178px;
+  gap: 5px;
+
+  @include tablets {
+    display: none;
+  }
+}
