@@ -20,7 +20,7 @@ const fonts = [
 ];
 
 const scripts = [
-    "src/javascript/**/*.js"
+    "src/javascript/index.js"
 ];
 
 task("fonts", () => src(fonts, { encoding: false })
