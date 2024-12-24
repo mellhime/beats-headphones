@@ -5,6 +5,9 @@ const concat = require('gulp-concat');
 const devServer = require('browser-sync').create();
 const cleanCss = require("gulp-clean-css");
 const uglify = require('gulp-uglify');
+const babel = require('gulp-babel');
+const rollup = require('gulp-rollup');
+// const resolve = require('@rollup/plugin-node-resolve').nodeResolve;
 
 task('clean', () => src('dist/**/*', { read: false }).pipe(rm()))
 task("copy:html", () => src('src/index.html').pipe(dest('dist')).pipe(devServer.reload({ stream: true })));
@@ -35,7 +38,18 @@ task('styles', () => src("src/styles/index.scss")
     .pipe(devServer.reload({ stream: true }))
 );
 
-task("scripts", () => src(scripts)
+task("scripts", () => src('src/**/*.js')
+      .pipe(rollup({
+          input: 'src/javascript/index.js',
+          output: {
+              format: 'iife',
+              name: 'bundle'
+          },
+          plugins: [
+              // resolve(),
+              babel()
+          ]
+      }))
     .pipe(concat('index.min.js', { newLine: ";" }))
     .pipe(uglify())
     .pipe(dest('dist/scripts'))

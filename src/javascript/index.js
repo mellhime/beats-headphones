@@ -1,3 +1,4 @@
+import "./glide"
 import colorsListener from './colors_section.js';
 
 colorsListener()
