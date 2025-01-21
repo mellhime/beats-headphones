@@ -1,7 +1,8 @@
-const reviewsList = document.getElementsByClassName('reviews__person');
-const reviewsContentList = document.getElementsByClassName('reviews__item');
+export default function reviewsListener () {
+    const reviewsList = document.getElementsByClassName('reviews__person');
+    const reviewsContentList = document.getElementsByClassName('reviews__item');
 
-[...reviewsList].forEach((el) => {
+    [...reviewsList].forEach((el) => {
     el.addEventListener("click", function () {
         let liElem = el
         if (!liElem.classList.contains('reviews__person--active')) {
@@ -20,4 +21,5 @@ const reviewsContentList = document.getElementsByClassName('reviews__item');
             liElem.classList.add('reviews__person--active');
         }
     });
-});
+    });
+}

@@ -7,7 +7,6 @@ const cleanCss = require("gulp-clean-css");
 const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
 const rollup = require('gulp-rollup');
-// const resolve = require('@rollup/plugin-node-resolve').nodeResolve;
 
 task('clean', () => src('dist/**/*', { read: false }).pipe(rm()))
 task("copy:html", () => src('src/index.html').pipe(dest('dist')).pipe(devServer.reload({ stream: true })));
@@ -46,7 +45,6 @@ task("scripts", () => src('src/**/*.js')
               name: 'bundle'
           },
           plugins: [
-              // resolve(),
               babel()
           ]
       }))
