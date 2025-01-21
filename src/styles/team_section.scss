@@ -1,0 +1,171 @@
+@use "mixins.scss" as *;
+@use "variables.scss" as *;
+
+.team {
+  display: flex;
+  justify-content: center;
+  background-color: $color-white;
+}
+
+.team__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.team__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+
+  @include phones {
+    font-size: 32px;
+  }
+}
+
+.team__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 53px;
+  gap: 20px;
+
+  @include tablets {
+    margin-top: 33px;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include phones {
+    gap: 6px;
+  }
+}
+
+.team__employee {
+  max-width: 25%;
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 75%;
+  }
+
+  @include phones {
+    max-width: 90%;
+  }
+}
+
+.team__photo {
+  @include tablets {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+    margin-top: 15px;
+  }
+
+  @include phones {
+    max-height: 180px;
+    max-width: 138px;
+  }
+}
+
+.team__main {
+  @include tablets {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.team__employee--active > .team__main > .team__photo {
+  @include tablets {
+    height: 100%;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.team__name {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+
+  @include tablets {
+    margin-top: 0;
+    font-size: 21px;
+  }
+}
+
+.team__name::after {
+  position: absolute;
+  text-align: center;
+  margin-top: 8px;
+  margin-left: 3px;
+  width: 0;
+  height: 0;
+  content: "";
+  border-style: solid;
+  border-width: 0 4.5px 7.8px 4.5px;
+  border-color: transparent transparent $color-red transparent;
+  transform: rotate(180deg);
+
+  @include tablets {
+    margin-top: 10px;
+    border-color: transparent transparent $color-dark-green transparent;
+  }
+
+  @include phones {
+    border-color: transparent transparent $color-red transparent;
+  }
+}
+
+.team__info {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.team__employee--active > .team__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.team__employee--active > .team__main > .team__name::after {
+  transform: rotate(0deg);
+}
+
+.team__profession {
+  margin-top: 11px;
+  text-align: center;
+
+  @include tablets {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+.team__description {
+  margin-top: 4px;
+  text-align: center;
+  color: $color-grey;
+
+  @include tablets {
+    max-width: 60%;
+  }
+
+  @include phones {
+    margin-top: 13px;
+    max-width: 80%;
+  }
+}

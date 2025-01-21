@@ -1,0 +1,136 @@
+@use "mixins.scss" as *;
+@use "variables.scss" as *;
+
+.colors {
+  background-image: url('../images/girl.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 75%;
+  display: flex;
+  justify-content: end;
+
+  @include tablets {
+    background-position: 95%;
+  }
+
+  @include phones {
+    background-position: 75%;
+  }
+}
+
+.colors__container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 100%;
+
+  @include phones {
+    justify-content: end;
+    position: relative;
+  }
+}
+
+.colors__header {
+  margin-left: 84px;
+  margin-top: 113px;
+  font-weight: 700;
+  font-size: 48px;
+  color: $color-white;
+  text-transform: uppercase;
+
+  @include tablets {
+    margin-left: 40px;
+    margin-top: 91px;
+  }
+
+  @include phones {
+    margin-left: 10px;
+    margin-top: 76px;
+    font-size: 32px;
+  }
+}
+
+.colors__list {
+  display: flex;
+}
+
+.colors__item {
+  display: flex;
+  color: $color-white;
+}
+
+.colors__name-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 102px;
+
+  @include phones {
+    width: 90px;
+  }
+}
+
+.colors__wrapper_silver {
+  background-color: $color-silver;
+}
+
+.colors__wrapper_black {
+  background-color: $color-black;
+}
+
+.colors__wrapper_red {
+  background-color: $color-red;
+}
+
+.colors__name {
+  margin-bottom: 40px;
+  font-family: "AlegreyaSans", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.colors__description-wrapper {
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  max-width: 524px;
+  background-color: $color-black-background;
+  opacity: 90%;
+}
+
+.colors__description {
+  margin-top: 31px;
+  margin-left: 38px;
+  margin-right: 53px;
+  font-family: "AlegreyaSans", sans-serif;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.colors__item--active > .colors__description-wrapper {
+  overflow: visible;
+  width: 90%;
+}
+
+body:has(.colors__item--active) .colors__header {
+  @include tablets {
+    display: none;
+  }
+}
+
+.colors__item--active {
+    @include phones {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      z-index: 1;
+    }
+}
+
+.colors__item:not(.colors__item--active) {
+  @include phones {
+    filter: blur(3px);
+  }
+}
