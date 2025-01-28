@@ -18,10 +18,12 @@ function initMap(){
     });
 
     for (let i = 0; i < pointsCoords.length; i++) {
-        pointsCollection.add(new ymaps.Placemark(pointsCoords[i]));
+        // TODO maybe get the address instead of shop number
+        pointsCollection.add(new ymaps.Placemark(pointsCoords[i], { hintContent: `Магазин №${i + 1}`}));
     }
 
     myMap.geoObjects.add(pointsCollection);
+    myMap.behaviors.disable('scrollZoom');
 }
 
 export { initMap }
