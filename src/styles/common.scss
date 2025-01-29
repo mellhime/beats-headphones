@@ -61,6 +61,7 @@
   background-color: $color-red;
   border-radius: 50%;
   position: relative;
+  opacity: 100%;
 }
 
 .scroll-list__dot--active::before {
