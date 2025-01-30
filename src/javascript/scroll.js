@@ -5,6 +5,11 @@ let sectionColorScheme = "light";
 let isScrollInProgress = false;
 
 const performMenuChange = function(section, sectionIndex) {
+  const rect = section.getBoundingClientRect();
+  const middleOfTheScreen = window.innerHeight / 2;
+  const checkSectionColor = rect.top <= middleOfTheScreen && rect.bottom >= middleOfTheScreen
+  if (!checkSectionColor) return
+
   sectionColorScheme = section.dataset.colorScheme;
   if (sectionColorScheme === 'dark') {
     scrollElement.classList.add('scroll-list--light');
@@ -35,12 +40,6 @@ const performTransition = function(sectionEq) {
 
   main.style.transform = `translateY(${position})`;
 
-  const activeSection = document.querySelector(".section--active");
-
-  setTimeout(function() {
-    performMenuChange(activeSection, sectionEq);
-  }, 700);
-
   setTimeout(function() {
     isScrollInProgress = false;
   }, 1300); // 1300 - .main (1s) + 300ms delay
@@ -51,6 +50,8 @@ const scrollToSection = function(direction) {
   const nextSection = activeSection.nextElementSibling;
   const prevSection = activeSection.previousElementSibling;
   const nextSectionIndex = Array.from(sections).indexOf(nextSection)
+
+  performMenuChange(activeSection, nextSectionIndex)
 
   if (nextSectionIndex === -1 && direction === 'next') return
 
