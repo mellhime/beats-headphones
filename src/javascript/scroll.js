@@ -1,16 +1,10 @@
 const sections = document.querySelectorAll(".section");
 const main = document.querySelector(".main")
 const scrollElement = document.querySelector(".scroll-list");
-let sectionColorScheme = "light";
 let isScrollInProgress = false;
 
-const performMenuChange = function(section, sectionIndex) {
-  const rect = section.getBoundingClientRect();
-  const middleOfTheScreen = window.innerHeight / 2;
-  const checkSectionColor = rect.top <= middleOfTheScreen && rect.bottom >= middleOfTheScreen
-  if (!checkSectionColor) return
-
-  sectionColorScheme = section.dataset.colorScheme;
+const performMenuChange = function(sectionIndex) {
+  let sectionColorScheme = sections[sectionIndex].dataset.colorScheme;
   if (sectionColorScheme === 'dark') {
     scrollElement.classList.add('scroll-list--light');
   } else {
@@ -24,19 +18,23 @@ const performMenuChange = function(section, sectionIndex) {
   activeDot.classList.add('scroll-list__dot--active');
 }
 
-const performTransition = function(sectionEq) {
+const performTransition = function(sectionIndex) {
   if (isScrollInProgress) return;
 
   isScrollInProgress = true;
-  const position = sectionEq * -100 + "vh";
+  const position = sectionIndex * -100 + "vh";
 
   sections.forEach((section, index) => {
-    if (index === sectionEq) {
+    if (index === sectionIndex) {
       section.classList.add("section--active");
     } else {
       section.classList.remove("section--active");
     }
   });
+
+  setTimeout(function() {
+    performMenuChange(sectionIndex)
+  }, 500);
 
   main.style.transform = `translateY(${position})`;
 
@@ -50,8 +48,6 @@ const scrollToSection = function(direction) {
   const nextSection = activeSection.nextElementSibling;
   const prevSection = activeSection.previousElementSibling;
   const nextSectionIndex = Array.from(sections).indexOf(nextSection)
-
-  performMenuChange(activeSection, nextSectionIndex)
 
   if (nextSectionIndex === -1 && direction === 'next') return
 
@@ -92,6 +88,15 @@ function smoothScrolling () {
         scrollToSection("prev");
         break;
     }
+  });
+
+  scrollElement.addEventListener("click", function (e) {
+    e.preventDefault()
+
+    const scrollDots = document.querySelectorAll(".scroll-list__dot");
+    const dotIndex = Array.from(scrollDots).indexOf(e.target)
+    if (dotIndex === -1) return
+    performTransition(dotIndex)
   });
 }
 
