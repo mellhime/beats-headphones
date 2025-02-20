@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="styles/index.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=5a1690f3-fbef-4d64-bd19-c5aa30744819&lang=en_US"></script>
     <title>Beats landing page</title>
 </head>
 <body>
 <div class="wrapper">
     <main class="main">
-        <section class="section info" data-color-scheme="light">
+        <section class="section info section--active" data-color-scheme="light">
             <div class="container info__container">
                 <header class="header">
                     <div class="header__content">
@@ -536,7 +537,7 @@
         </section>
         <section class="section contacts" data-color-scheme="light">
             <div class="container contacts__container">
-                <div class="contacts__map"></div>
+                <div class="contacts__map" id="map"></div>
                 <footer class="footer">
                     <div class="footer__content">
                         <div class="contacts__info">
@@ -574,18 +575,18 @@
                 </footer>
             </div>
         </section>
-        <div class="scroll-list">
-            <span class="scroll-list__dot--active"></span>
-            <span class="scroll-list__dot scroll-list__dot--light"></span>
-            <span class="scroll-list__dot"></span>
-            <span class="scroll-list__dot"></span>
-            <span class="scroll-list__dot"></span>
-            <span class="scroll-list__dot"></span>
-            <span class="scroll-list__dot"></span>
-            <span class="scroll-list__dot"></span>
-            <span class="scroll-list__dot"></span>
-        </div>
     </main>
+    <div class="scroll-list">
+        <span class="scroll-list__dot scroll-list__dot--active"></span>
+        <span class="scroll-list__dot"></span>
+        <span class="scroll-list__dot"></span>
+        <span class="scroll-list__dot"></span>
+        <span class="scroll-list__dot"></span>
+        <span class="scroll-list__dot"></span>
+        <span class="scroll-list__dot"></span>
+        <span class="scroll-list__dot"></span>
+        <span class="scroll-list__dot"></span>
+    </div>
 </div>
 <script type="module" src="scripts/index.min.js"></script>
 </body>
