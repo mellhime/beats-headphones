@@ -33,6 +33,10 @@
   @include tablets {
     right: 10px;
   }
+
+  @include phones {
+    display: none;
+  }
 }
 
 .scroll-list--light > .scroll-list__dot {
@@ -53,6 +57,7 @@
   background-color: $color-black;
   opacity: 60%;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .scroll-list__dot--active {

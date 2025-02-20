@@ -44,6 +44,9 @@ const performTransition = function(sectionIndex) {
 };
 
 const scrollToSection = function(direction) {
+  const collapsedMenu = document.querySelector(".navigation--collapsed")
+
+  if (collapsedMenu) return
   const activeSection = document.querySelector(".section--active");
   const nextSection = activeSection.nextElementSibling;
   const prevSection = activeSection.previousElementSibling;
@@ -60,10 +63,10 @@ const scrollToSection = function(direction) {
   }
 };
 
-function smoothScrolling () {
-  document.querySelector(".wrapper").addEventListener("touchmove", e => e.preventDefault());
+const wrapper = document.querySelector(".wrapper");
 
-  document.querySelector(".wrapper").addEventListener("wheel", function (e) {
+function smoothScrolling () {
+  wrapper.addEventListener("wheel", function (e) {
     e.preventDefault()
     const deltaY = e.deltaY;
 
@@ -73,6 +76,31 @@ function smoothScrolling () {
 
     if (deltaY < 0) {
       scrollToSection("prev");
+    }
+  });
+
+  let touchStartY = 0;
+  let touchEndY = 0;
+  const minDiff = 50;
+
+  wrapper.addEventListener("touchstart", (event) => {
+    touchStartY = event.touches[0].clientY;
+  }, { passive: true });
+
+  wrapper.addEventListener("touchmove", (event) => {
+    event.preventDefault(); // Блокируем нативный скролл
+  }, { passive: false });
+
+  wrapper.addEventListener("touchend", (event) => {
+    touchEndY = event.changedTouches[0].clientY;
+
+    const deltaY = touchStartY - touchEndY;
+    if (Math.abs(deltaY) > minDiff) {
+      if (deltaY > 0) {
+        scrollToSection("next");
+      } else {
+        scrollToSection("prev");
+      }
     }
   });
 
@@ -97,6 +125,33 @@ function smoothScrolling () {
     const dotIndex = Array.from(scrollDots).indexOf(e.target)
     if (dotIndex === -1) return
     performTransition(dotIndex)
+  });
+
+  const navigationList = document.querySelector(".navigation__list");
+  const navigationDict = {
+    "about": "info",
+    "headphones": "purchase",
+    "team": "team",
+    "colors": "colors",
+    "reviews": "reviews",
+    "work": "work",
+    "contacts": "contacts"
+  }
+
+  navigationList.addEventListener("click", function (e) {
+    e.preventDefault()
+
+    const itemTag = e.target.dataset.tag
+    const nextSection = document.querySelector(`.${navigationDict[itemTag]}`)
+    const nextSectionIndex = Array.from(sections).indexOf(nextSection)
+    if (nextSectionIndex === -1) return
+    performTransition(nextSectionIndex)
+
+    const collapsedMenu = document.querySelector(".navigation--collapsed")
+    if (collapsedMenu) {
+      document.querySelector(".navigation").classList.remove('navigation--collapsed');
+      document.querySelector(".navigation__button").classList.remove('navigation__button--active');
+    }
   });
 }
 

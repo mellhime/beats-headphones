@@ -24,29 +24,29 @@
                         <nav class="navigation">
                             <ul class="navigation__list">
                                 <li class="navigation__item">
-                                    <a class="navigation__link" href="#">О нас</a>
+                                    <a class="navigation__link" href="#" data-tag="about">О нас</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a class="navigation__link" href="#">Наушники</a>
+                                    <a class="navigation__link" href="#" data-tag="headphones">Наушники</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a class="navigation__link" href="#">Команда</a>
+                                    <a class="navigation__link" href="#" data-tag="team">Команда</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a class="navigation__link" href="#">Цвета</a>
+                                    <a class="navigation__link" href="#" data-tag="colors">Цвета</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a class="navigation__link" href="#">Отзывы</a>
+                                    <a class="navigation__link" href="#" data-tag="reviews">Отзывы</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a class="navigation__link" href="#">Как мы работаем</a>
+                                    <a class="navigation__link" href="#" data-tag="work">Как мы работаем</a>
                                 </li>
                                 <li class="navigation__item">
-                                    <a class="navigation__link" href="#">Контакты</a>
+                                    <a class="navigation__link" href="#" data-tag="contacts">Контакты</a>
                                 </li>
                             </ul>
                         </nav>
-                        <button class="navigation-button">
+                        <button class="navigation__button">
                             <div class="burger">
                                 <div class="black-line"></div>
                                 <div class="black-line"></div>
@@ -62,35 +62,37 @@
                         </div>
                     </div>
                 </header>
-                <div class="info__description">
-                    <div class="info__content">
-                        <h1 class="info__title">Беспроводные наушники Beats&nbsp;Solo&nbsp;3</h1>
-                        <p class="info__synopsis">Встречайте новую версию наушников из линейки Powerbeats.</p>
-                        <div class="info__order">
-                            <button class="order-button">Заказать</button>
+                <div class="info__wrapper">
+                    <div class="info__description">
+                        <div class="info__content">
+                            <h1 class="info__title">Беспроводные наушники Beats&nbsp;Solo&nbsp;3</h1>
+                            <p class="info__synopsis">Встречайте новую версию наушников из линейки Powerbeats.</p>
+                            <div class="info__order">
+                                <button class="order-button">Заказать</button>
+                            </div>
+                            <ul class="info__list">
+                                <li class="info__item">
+                                    <svg class="info__icon">
+                                        <use href="images/icons/sprite.svg#ear"></use>
+                                    </svg>
+                                    <p class="info__text">Безупречный звук</p>
+                                </li>
+                                <li class="info__item">
+                                    <svg class="info__icon">
+                                        <use href="images/icons/sprite.svg#battery"></use>
+                                    </svg>
+                                    <p class="info__text">До 40 часов работы</p>
+                                </li>
+                                <li class="info__item">
+                                    <svg class="info__icon">
+                                        <use href="images/icons/sprite.svg#socket"></use>
+                                    </svg>
+                                    <p class="info__text">Технология Fast Fuel</p>
+                                </li>
+                            </ul>
                         </div>
-                        <ul class="info__list">
-                            <li class="info__item">
-                                <svg class="info__icon">
-                                    <use href="images/icons/sprite.svg#ear"></use>
-                                </svg>
-                                <p class="info__text">Безупречный звук</p>
-                            </li>
-                            <li class="info__item">
-                                <svg class="info__icon">
-                                    <use href="images/icons/sprite.svg#battery"></use>
-                                </svg>
-                                <p class="info__text">До 40 часов работы</p>
-                            </li>
-                            <li class="info__item">
-                                <svg class="info__icon">
-                                    <use href="images/icons/sprite.svg#socket"></use>
-                                </svg>
-                                <p class="info__text">Технология Fast Fuel</p>
-                            </li>
-                        </ul>
+                        <img class="info__headphones" src="images/headphones.png" alt="headphones">
                     </div>
-                    <img class="info__headphones" src="images/headphones.png" alt="headphones">
                 </div>
             </div>
         </section>
@@ -222,7 +224,7 @@
                                         </li>
                                     </ul>
                                     <div class="purchase__buying">
-                                        <p class="purchase__price">14&nbsp;990 ₽</p>
+                                        <p class="purchase__price">14&nbsp;990&nbsp;₽</p>
                                         <button class="order-button">Заказать</button>
                                     </div>
                                 </div>
