@@ -11,6 +11,11 @@ html {
   color: $color-black;
 }
 
+.main {
+  height: 100%;
+  transition: transform 1s;
+}
+
 .section {
   height: 100vh;
 }

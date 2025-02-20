@@ -45,6 +45,7 @@
 
 .team__employee {
   max-width: 25%;
+  position: relative;
 
   @include tablets {
     display: flex;
@@ -126,6 +127,7 @@
 }
 
 .team__info {
+  position: absolute;
   visibility: hidden;
   height: 0;
   opacity: 0;

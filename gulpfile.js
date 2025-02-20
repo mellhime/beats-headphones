@@ -74,7 +74,7 @@ task('devServer', () => {
 
 task("watch", () => {
     watch(styles, series("styles"));
-    watch(scripts, series("scripts"));
+    watch("src/javascript/**/*.js", series("scripts"));
     watch("src/*.html", series("copy:html"));
 })
 
