@@ -57,6 +57,7 @@
 .colors__item {
   display: flex;
   color: $color-white;
+  cursor: pointer;
 }
 
 .colors__name-wrapper {
@@ -129,7 +130,7 @@ body:has(.colors__item--active) .colors__header {
     }
 }
 
-.colors__item:not(.colors__item--active) {
+body:has(.colors__item--active) .colors__item:not(.colors__item--active) {
   @include phones {
     filter: blur(3px);
   }
