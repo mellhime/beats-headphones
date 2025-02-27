@@ -7,6 +7,8 @@ const cleanCss = require("gulp-clean-css");
 const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
 const rollup = require('gulp-rollup');
+const gulpif = require('gulp-if');
+const env = process.env.NODE_ENV;
 
 task('clean', () => src('dist/**/*', { read: false }).pipe(rm()))
 task("copy:html", () => src('src/index.html').pipe(dest('dist')).pipe(devServer.reload({ stream: true })));
@@ -21,10 +23,6 @@ const fonts = [
     "src/fonts/**/*.woff"
 ];
 
-const scripts = [
-    "src/javascript/index.js"
-];
-
 task("fonts", () => src(fonts, { encoding: false })
     .pipe(dest('dist/fonts'))
 )
@@ -32,7 +30,7 @@ task("fonts", () => src(fonts, { encoding: false })
 task('styles', () => src("src/styles/index.scss")
     .pipe(concat('index.min.scss'))
     .pipe(sass().on('error', sass.logError))
-    .pipe(cleanCss())
+    .pipe(gulpif(env === "prod", cleanCss()))
     .pipe(dest('dist/styles'))
     .pipe(devServer.reload({ stream: true }))
 );
@@ -49,7 +47,7 @@ task("scripts", () => src('src/**/*.js')
           ]
       }))
     .pipe(concat('index.min.js', { newLine: ";" }))
-    .pipe(uglify())
+    .pipe(gulpif(env === "prod", uglify()))
     .pipe(dest('dist/scripts'))
     .pipe(devServer.reload({ stream: true }))
 );
