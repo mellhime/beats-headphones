@@ -33,7 +33,7 @@
 .purchase__slide {
   display: flex;
   justify-content: space-between;
-  gap: 59px;
+  gap: 39px;
 
   @include tablets {
     flex-direction: column;
@@ -71,7 +71,7 @@
 }
 
 .purchase__arrow--right {
-  right: 10%;
+  right: 5%;
   transform: rotate(-45deg);
 
   @include tablets {

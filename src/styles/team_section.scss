@@ -132,6 +132,10 @@
   height: 0;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
+
+  @include tablets {
+    position: static;
+  }
 }
 
 .team__employee--active > .team__info {

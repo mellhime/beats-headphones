@@ -65,6 +65,10 @@ function smoothScrolling () {
 
   document.querySelector(".wrapper").addEventListener("wheel", function (e) {
     e.preventDefault()
+
+    const collapsedMenu = document.querySelector(".navigation__list--collapsed")
+
+    if (collapsedMenu) return
     const deltaY = e.deltaY;
 
     if (deltaY > 0) {
@@ -97,6 +101,34 @@ function smoothScrolling () {
     const dotIndex = Array.from(scrollDots).indexOf(e.target)
     if (dotIndex === -1) return
     performTransition(dotIndex)
+  });
+
+  const navigationList = document.querySelector(".navigation__list");
+  const navigationDict = {
+    "about": "info",
+    "headphones": "purchase",
+    "team": "team",
+    "colors": "colors",
+    "reviews": "reviews",
+    "work": "work",
+    "contacts": "contacts"
+  }
+
+  navigationList.addEventListener("click", function (e) {
+    e.preventDefault()
+
+    const itemTag = e.target.dataset.tag
+    const nextSection = document.querySelector(`.${navigationDict[itemTag]}`)
+    const nextSectionIndex = Array.from(sections).indexOf(nextSection)
+    if (nextSectionIndex === -1) return
+    performTransition(nextSectionIndex)
+
+    const collapsedMenu = document.querySelector(".navigation__list--collapsed")
+    if (collapsedMenu) {
+      document.querySelector(".navigation__list").classList.remove('navigation__list--collapsed');
+      document.querySelector(".navigation__button").classList.remove('navigation__button--active');
+    }
+    // TODO menu items are disappearing after first transition
   });
 }
 

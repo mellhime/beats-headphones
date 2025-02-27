@@ -1,12 +1,12 @@
 export default function burgerNavigationListener () {
-    const burgerNavigation = [...document.getElementsByClassName('navigation-button')][0];
+    const burgerNavigation = document.querySelector('.navigation__button')
     burgerNavigation.addEventListener("click", function () {
-        let ulElem = [...document.getElementsByClassName('navigation__list')][0]
-        if (burgerNavigation.classList.contains('navigation-button--active')) {
-            burgerNavigation.classList.remove('navigation-button--active');
+        const ulElem = document.querySelector('.navigation__list')
+        if (burgerNavigation.classList.contains('navigation__button--active')) {
+            burgerNavigation.classList.remove('navigation__button--active');
             ulElem.classList.remove('navigation__list--collapsed');
         } else {
-            burgerNavigation.classList.add('navigation-button--active');
+            burgerNavigation.classList.add('navigation__button--active');
             ulElem.classList.add('navigation__list--collapsed');
         }
     })
