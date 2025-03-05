@@ -44,6 +44,9 @@ const performTransition = function(sectionIndex) {
 };
 
 const scrollToSection = function(direction) {
+  const collapsedMenu = document.querySelector(".navigation--collapsed")
+
+  if (collapsedMenu) return
   const activeSection = document.querySelector(".section--active");
   const nextSection = activeSection.nextElementSibling;
   const prevSection = activeSection.previousElementSibling;
@@ -60,15 +63,11 @@ const scrollToSection = function(direction) {
   }
 };
 
+const wrapper = document.querySelector(".wrapper");
+
 function smoothScrolling () {
-  document.querySelector(".wrapper").addEventListener("touchmove", e => e.preventDefault());
-
-  document.querySelector(".wrapper").addEventListener("wheel", function (e) {
+  wrapper.addEventListener("wheel", function (e) {
     e.preventDefault()
-
-    const collapsedMenu = document.querySelector(".navigation__list--collapsed")
-
-    if (collapsedMenu) return
     const deltaY = e.deltaY;
 
     if (deltaY > 0) {
@@ -77,6 +76,31 @@ function smoothScrolling () {
 
     if (deltaY < 0) {
       scrollToSection("prev");
+    }
+  });
+
+  let touchStartY = 0;
+  let touchEndY = 0;
+  const minDiff = 50;
+
+  wrapper.addEventListener("touchstart", (event) => {
+    touchStartY = event.touches[0].clientY;
+  }, { passive: true });
+
+  wrapper.addEventListener("touchmove", (event) => {
+    event.preventDefault(); // Блокируем нативный скролл
+  }, { passive: false });
+
+  wrapper.addEventListener("touchend", (event) => {
+    touchEndY = event.changedTouches[0].clientY;
+
+    const deltaY = touchStartY - touchEndY;
+    if (Math.abs(deltaY) > minDiff) {
+      if (deltaY > 0) {
+        scrollToSection("next");
+      } else {
+        scrollToSection("prev");
+      }
     }
   });
 
@@ -123,12 +147,11 @@ function smoothScrolling () {
     if (nextSectionIndex === -1) return
     performTransition(nextSectionIndex)
 
-    const collapsedMenu = document.querySelector(".navigation__list--collapsed")
+    const collapsedMenu = document.querySelector(".navigation--collapsed")
     if (collapsedMenu) {
-      document.querySelector(".navigation__list").classList.remove('navigation__list--collapsed');
+      document.querySelector(".navigation").classList.remove('navigation--collapsed');
       document.querySelector(".navigation__button").classList.remove('navigation__button--active');
     }
-    // TODO menu items are disappearing after first transition
   });
 }
 

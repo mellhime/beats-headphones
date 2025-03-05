@@ -64,6 +64,7 @@
 
   @include phones {
    flex-direction: column;
+    margin-top: 32px;
     gap: 43px;
   }
 }
@@ -99,15 +100,6 @@
   }
 }
 
-.specification__separator {
-  margin-top: 50px;
-}
-
-.specification__separator-icon {
-  width: 67px;
-  height: 21px;
-}
-
 .specification__background-icon {
   display: flex;
   align-items: center;
@@ -116,11 +108,21 @@
   height: 128px;
   background-color: $color-light-grey;
   border-radius: 50%;
+
+  @include phones {
+    min-width: 64px;
+    height: 64px;
+  }
 }
 
 .specification__icon {
   width: 68px;
   height: 68px;
+
+  @include phones {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 .specification__content {

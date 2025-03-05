@@ -30,6 +30,14 @@
   max-width: 940px;
 }
 
+.purchase__slides {
+  @include tablets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .purchase__slide {
   display: flex;
   justify-content: space-between;
@@ -85,6 +93,8 @@
 
 .purchase__headphones {
   margin-top: 30px;
+  max-width: 452px;
+  max-height: 452px;
 
   @include tablets {
     margin-top: 0;
@@ -222,7 +232,7 @@
   display: flex;
   align-items: center;
   margin-top: 23px;
-  gap: 20px;
+  gap: 12px;
 
   @include tablets {
     gap: 44px;
