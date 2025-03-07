@@ -545,6 +545,7 @@ html {
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
+  z-index: 2;
 }
 
 .header__content {
@@ -610,8 +611,10 @@ html {
   }
 }
 
-body:has(.navigation--collapsed) {
-  overflow: hidden;
+@media screen and (max-width: 768px) {
+  body:has(.navigation--collapsed) {
+    overflow: hidden;
+  }
 }
 
 .navigation__link {
@@ -669,7 +672,6 @@ body:has(.navigation--collapsed) {
 
 .info__content {
   margin-top: 47px;
-  z-index: 1;
   width: 50%;
 }
 @media screen and (max-width: 768px) {
@@ -757,7 +759,6 @@ body:has(.navigation--collapsed) {
 
 .info__headphones {
   position: absolute;
-  z-index: 0;
   right: 3%;
   max-width: 489px;
   max-height: 489px;
