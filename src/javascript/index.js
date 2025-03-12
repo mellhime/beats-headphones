@@ -5,12 +5,14 @@ import reviewsListener from "./reviews_section.js";
 import teamDescriptionListener from "./team_section.js";
 import { initMap } from "./map_section.js"
 import { smoothScrolling } from "./scroll.js";
+import createVideoPlayer from "./video_section";
 
 colorsListener()
 burgerNavigationListener()
 reviewsListener()
 teamDescriptionListener()
 smoothScrolling()
+createVideoPlayer()
 
 const glide = new Glide('.glide', {
     perView: 1

@@ -456,20 +456,11 @@
                 </ul>
             </div>
         </section>
-        <section class="section work" data-color-scheme="light">
-            <div class="container work__container">
-                <h2 class="work__title">Как мы работаем</h2>
-                <div class="work__player">
-                    <div id="player"></div>
-                    <div class="work__play-main"></div>
-                    <div class="work__controls">
-                        <div class="work__play"></div>
-                        <div class="work__progress-bar"></div>
-                        <div class="work__volume">
-                            <img src="images/icons/volume.svg" alt="volume">
-                            <div class="work__volume-bar"></div>
-                        </div>
-                    </div>
+        <section class="section video" data-color-scheme="light">
+            <div class="container video__container">
+                <h2 class="video__title">Как мы работаем</h2>
+                <div class="video__player">
+                    <div id="yt-player"></div>
                 </div>
             </div>
         </section>
@@ -600,65 +591,5 @@
     </div>
 </div>
 <script type="module" src="scripts/index.min.js"></script>
-<script>
-    const tag = document.createElement('script');
-
-    tag.src = "https://www.youtube.com/iframe_api";
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    let player;
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-            height: '390',
-            width: '660',
-            videoId: 'N3YB8ODr9S4',
-            playerVars: {
-                rel: 0,
-                fs: 0,
-                frameborder: 0,
-                controls: 0,
-                iv_load_policy: 3,
-                enablejsapi: 1
-
-            },
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-        });
-    }
-
-    function onPlayerReady(event) {
-        console.log('xxxx')
-
-        const playButton = document.getElementsByClassName("work__play")[0];
-        const ypPlayButton =document.getElementsByClassName("ytp-large-play-button")[0];
-        console.log(ypPlayButton)
-
-        ypPlayButton.style.display = "none";
-        console.log(playButton)
-        playButton.addEventListener("click", function() {
-            if (player.getPlayerState() == YT.PlayerState.PLAYING) {
-                player.pauseVideo();
-            } else {
-                player.playVideo();
-            }
-        });
-    }
-
-    let done = false;
-    function onPlayerStateChange(event) {
-        console.log('yyy')
-
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-            setTimeout(stopVideo, 6000);
-            done = true;
-        }
-    }
-    function stopVideo() {
-        player.stopVideo();
-    }
-</script>
 </body>
 </html>
