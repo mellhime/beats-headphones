@@ -30,10 +30,18 @@
   max-width: 940px;
 }
 
+.purchase__slides {
+  @include tablets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .purchase__slide {
   display: flex;
   justify-content: space-between;
-  gap: 59px;
+  gap: 39px;
 
   @include tablets {
     flex-direction: column;
@@ -71,7 +79,7 @@
 }
 
 .purchase__arrow--right {
-  right: 10%;
+  right: 5%;
   transform: rotate(-45deg);
 
   @include tablets {
@@ -85,6 +93,8 @@
 
 .purchase__headphones {
   margin-top: 30px;
+  max-width: 452px;
+  max-height: 452px;
 
   @include tablets {
     margin-top: 0;
@@ -222,7 +232,7 @@
   display: flex;
   align-items: center;
   margin-top: 23px;
-  gap: 20px;
+  gap: 12px;
 
   @include tablets {
     gap: 44px;

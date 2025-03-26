@@ -105,3 +105,7 @@
     height: 24px;
   }
 }
+
+.contacts__link:hover > .contacts__icon {
+  fill: $color-black;
+}
