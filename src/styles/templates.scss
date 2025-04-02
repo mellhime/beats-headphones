@@ -1,0 +1,12 @@
+%for-containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+%for-main-titles {
+  font-weight: 700;
+  font-size: 48px;
+  text-transform: uppercase;
+}

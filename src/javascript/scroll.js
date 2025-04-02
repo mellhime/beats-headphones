@@ -134,7 +134,7 @@ function smoothScrolling () {
     "team": "team",
     "colors": "colors",
     "reviews": "reviews",
-    "work": "work",
+    "video": "video",
     "contacts": "contacts"
   }
 
