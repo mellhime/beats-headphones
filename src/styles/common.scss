@@ -37,45 +37,42 @@
   @include phones {
     display: none;
   }
-}
 
-.scroll-list--light > .scroll-list__dot {
-  background-color: $color-white;
-}
+  &__dot {
+    height: 8px;
+    width: 8px;
+    background-color: $color-black;
+    opacity: 60%;
+    border-radius: 50%;
+    cursor: pointer;
 
-.scroll-list--light > .scroll-list__dot--active {
-  background-color: $color-white;
-}
+    &--active {
+      width: 8px;
+      height: 8px;
+      background-color: $color-red;
+      border-radius: 50%;
+      position: relative;
+      opacity: 100%;
 
-.scroll-list--light > .scroll-list__dot--active::before {
-  border: 1px solid $color-white;
-}
+      &::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 14px;
+        height: 14px;
+        border: 1px solid $color-red;
+        border-radius: 50%;
+      }
+    }
+  }
 
-.scroll-list__dot {
-  height: 8px;
-  width: 8px;
-  background-color: $color-black;
-  opacity: 60%;
-  border-radius: 50%;
-  cursor: pointer;
-}
+  &--light > &__dot,
+  &--light > &__dot--active {
+    background-color: $color-white;
+  }
 
-.scroll-list__dot--active {
-  width: 8px;
-  height: 8px;
-  background-color: $color-red;
-  border-radius: 50%;
-  position: relative;
-  opacity: 100%;
-}
-
-.scroll-list__dot--active::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 14px;
-  height: 14px;
-  border: 1px solid $color-red;
-  border-radius: 50%;
+  &--light > &__dot--active::before {
+    border: 1px solid $color-white;
+  }
 }

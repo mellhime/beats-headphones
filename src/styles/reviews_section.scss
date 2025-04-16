@@ -1,171 +1,167 @@
 @use "mixins.scss" as *;
 @use "variables.scss" as *;
+@use "templates.scss" as *;
 
 .reviews {
   display: flex;
   justify-content: center;
   background-color: $color-white;
-}
 
-.reviews__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.reviews__main-header {
-  z-index: 1;
-  font-size: 48px;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  @include phones {
-    font-size: 32px;
-  }
-}
-
-.reviews__list {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.reviews__item {
-  display: none;
-  position: relative;
-  margin-top: 32px;
-  padding: 42px;
-  background-color: $color-light-grey-background;
-
-  @include tablets {
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    margin-top: 6px;
+  &__container {
+    @extend %for-containers;
   }
 
-  @include phones {
-    margin-top: 26px;
-  }
-}
+  &__main-header {
+    @extend %for-main-titles;
+    z-index: 1;
 
-.reviews__item--active {
-  display: flex;
-}
-
-.reviews__item::after {
-  position: absolute;
-  left: calc(50% - 41px);
-  top: -61px;
-  height: 83px;
-  width: 83px;
-  content: "";
-  background-color: $color-white;
-  border-radius: 50%;
-
-  @include tablets {
-    top: -48px;
+    @include phones {
+      font-size: 32px;
+    }
   }
 
-  @include phones {
-    content: none;
-  }
-}
-
-.reviews__photo-big {
-  @include tablets {
-    margin-left: 0;
-    width: 130px;
-    height: 130px;
-  }
-}
-
-.reviews__text {
-  margin-top: 30px;
-  margin-left: 40px;
-  max-width: 460px;
-
-  @include tablets {
-    margin-left: 0;
-    max-width: 100%;
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
-  @include phones {
-    margin-top: 20px;
-  }
-}
-
-.reviews__header {
-  font-weight: 700;
-  font-size: 24px;
-
-  @include tablets {
-    text-align: center;
-  }
-}
-
-.reviews__description {
-  margin-top: 27px;
-  color: $color-grey;
-
-  @include tablets {
-    margin-top: 16px;
-    text-align: center;
-  }
-
-  @include phones {
-    margin-top: 12px;
-  }
-}
-
-.reviews__author {
-  margin-top: 40px;
-  font-weight: 700;
-  font-size: 18px;
-
-  @include tablets {
-    margin-top: 16px;
-    font-weight: 400;
-    text-align: center;
-  }
-
-  @include phones {
-    margin-top: 12px;
-  }
-}
-
-.reviews__people {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 11px;
-  gap: 6px;
-
-  @include tablets {
+  &__item {
+    display: none;
+    position: relative;
     margin-top: 32px;
+    padding: 42px;
+    background-color: $color-light-grey-background;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin-top: 6px;
+    }
+
+    @include phones {
+      margin-top: 26px;
+    }
+
+    &--active {
+      display: flex;
+    }
+
+    &::after {
+      position: absolute;
+      left: calc(50% - 41px);
+      top: -61px;
+      height: 83px;
+      width: 83px;
+      content: "";
+      background-color: $color-white;
+      border-radius: 50%;
+
+      @include tablets {
+        top: -48px;
+      }
+
+      @include phones {
+        content: none;
+      }
+    }
   }
 
-  @include phones {
-    margin-top: 54px;
+  &__photo {
+    @include phones {
+      width: 64px;
+      height: 64px;
+    }
+
+    &-big {
+      @include tablets {
+        margin-left: 0;
+        width: 130px;
+        height: 130px;
+      }
+    }
   }
-}
 
-.reviews__person {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
+  &__text {
+    margin-top: 30px;
+    margin-left: 40px;
+    max-width: 460px;
 
-.reviews__person--active {
-  border-radius: 104px;
-  outline: 4px solid $color-red;
-  outline-offset: -4px;
-}
+    @include tablets {
+      margin-left: 0;
+      max-width: 100%;
+    }
 
-.reviews__photo {
-  @include phones {
-    width: 64px;
-    height: 64px;
+    @include phones {
+      margin-top: 20px;
+    }
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 24px;
+
+    @include tablets {
+      text-align: center;
+    }
+  }
+
+  &__description {
+    margin-top: 27px;
+    color: $color-grey;
+
+    @include tablets {
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    @include phones {
+      margin-top: 12px;
+    }
+  }
+
+  &__author {
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 18px;
+
+    @include tablets {
+      margin-top: 16px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    @include phones {
+      margin-top: 12px;
+    }
+  }
+
+  &__people {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 11px;
+    gap: 6px;
+
+    @include tablets {
+      margin-top: 32px;
+    }
+
+    @include phones {
+      margin-top: 54px;
+    }
+  }
+
+  &__person {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &--active {
+      border-radius: 104px;
+      outline: 4px solid $color-red;
+      outline-offset: -4px;
+    }
   }
 }
